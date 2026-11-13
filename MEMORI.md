@@ -11,13 +11,15 @@
 - Versi: `1.0.0+1`
 - SDK Dart: `^3.13.7`
 - Branch git aktif: `main`
-- Status pengembangan: awal (belum ada fitur `lib/fitur/...`; hanya `lib/main.dart` dan `test/widget_test.dart`)
+- Status pengembangan: awal (belum ada fitur `lib/fitur/...`; hanya `lib/main.dart`, `lib/app.dart`, `lib/home.dart`, dan `test/widget_test.dart`)
 
 ## Tujuan Proyek
 Belum diketahui. Dokumen `docs/struktur_proyek.md` dan `docs/rencana_integrasi_profile.md` mengindikasikan adanya spesifikasi fitur yang cukup lengkap (dashboard, biodata, impian, diary craving, dll.), tetapi dokumen tersebut belum diverifikasi terhadap kode sumber. Jangan menganggap `docs/struktur_proyek.md` sebagai kondisi aktual `lib/`.
 
 ## Struktur Penting
-- `lib/main.dart` — entry point aplikasi
+- `lib/main.dart` — entry point aplikasi (hanya berisi `main()`)
+- `lib/app.dart` — root widget (`MyApp`)
+- `lib/home.dart` — halaman utama (`MyHomePage` dan `_MyHomePageState`); memuat `NavigationBar` 4 tab (Dashboard, Biodata, Impian, Lainnya) mengikuti pola `docs/lib.md`; tab selain Dashboard masih placeholder
 - `test/widget_test.dart` — satu widget test bawaan
 - `docs/` — dokumen spesifikasi/referensi (belum terverifikasi sinkron dengan kode)
 - `script/` — kumpulan skrip bash pengembangan (antara lain `build_core_shared.sh`, `build_lib_docs.sh`, `build_structure.sh`, `script_tes.sh`)
@@ -52,7 +54,7 @@ Folder `hasil_diskusi/` di root proyek. Berkas: `diskusi_1.md`, `diskusi_2.md` (
 Lihat `memori/riwayat_perubahan.md`.
 
 ## Lokasi Berkas Sesi
-`memori/sesi/sesi_N.md` (diarsipkan permanen). Nomor tertinggi saat ini: 4 (`sesi_4.md`). Catatan: `sesi_2.md` masih ber-status `Belum Sinkron` (mengklaim `apk_kompetitor.md` dibuat, tetapi berkas tidak ada dan `git status` bersih; tidak dapat diverifikasi — menunggu keputusan pengguna).
+`memori/sesi/sesi_N.md` (diarsipkan permanen). Nomor tertinggi saat ini: 7 (`sesi_7.md`). Catatan: `sesi_2.md` masih ber-status `Belum Sinkron` (mengklaim `apk_kompetitor.md` dibuat, tetapi berkas tidak ada dan `git status` bersih; tidak dapat diverifikasi — menunggu keputusan pengguna).
 
 ## Catatan untuk Model Selanjutnya
 - Jangan mengarang status pengembangan atau tujuan produk; bagian yang belum diverifikasi wajib ditandai "Belum diketahui".

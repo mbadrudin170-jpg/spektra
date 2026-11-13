@@ -118,11 +118,11 @@
     "continue_loop_on_deny": true,
     "multi_project_agent_manager": true,
     "codebase_search": false,
-    "mcp_timeout": 30000
+    "mcp_timeout": 60000
   },
   "default_agent": "code",
   "commit_message": {
-    "prompt": "Buat pesan commit mengikuti format Conventional Commits berdasarkan diff perubahan yang di-stage. Aturan: (1) Format wajib `<type>(<scope>): <deskripsi>` dengan type salah satu dari feat, fix, docs, style, refactor, test, chore, perf, build, ci; scope opsional, diisi nama area/fitur yang jelas (mis. sqflite, biodata, command) bila ada. (2) Deskripsi menggunakan bahasa Indonesia baku, diawali huruf kecil, maksimal 72 karakter, bentuk imperatif, tanpa tanda titik di akhir. (3) Isi commit harus sesuai dengan diff yang di-stage; dilarang mengarang perubahan yang tidak ada di diff. (4) Jawab hanya dengan pesan commit: tanpa kata pengantar, tanpa penjelasan, tanpa backtick, dan tanpa tanda kutip. (5) Bila perubahan kompleks, tambahkan body setelah satu baris kosong; body juga bahasa Indonesia baku dan difokuskan pada alasan perubahan, bukan mengulang diff."
+    "prompt": "Buat pesan commit Conventional Commits dari diff yang di-stage: `<type>(<scope>): <deskripsi>` (type: feat, fix, docs, style, refactor, test, chore, perf, build, ci). Deskripsi bahasa Indonesia baku, huruf kecil, imperatif, maks. 72 karakter, tanpa titik akhir. Isi sesuai diff; dilarang mengarang. Jawab hanya pesan commit, tanpa kata pengantar, backtick, atau kutip. Body opsional setelah satu baris kosong bila kompleks."
   },
   "compaction": {
     "auto": true,
