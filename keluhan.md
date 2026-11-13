@@ -1,0 +1,1 @@
+1. saya ingin menampilkan spesifikasi baterai perangkat user, misalnya berapa mah, apakah terhubung ke cargher 
