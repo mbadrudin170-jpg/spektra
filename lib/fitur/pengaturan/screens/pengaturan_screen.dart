@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-import 'package:spektra/fitur/pengaturan/tema/tema_controller.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import 'package:spektra/fitur/pengaturan/tema/tema_provider.dart';
 
 // Layar pengaturan; saat ini memuat pilihan mode tema aplikasi
 // (terang, gelap, atau mengikuti sistem).
 //
 // Disematkan sebagai konten tab (bukan layar yang di-push), sehingga tidak
 // membawa `Scaffold`/`AppBar` sendiri — kerangka layar disediakan pemanggil.
-class PengaturanScreen extends StatelessWidget {
-  const PengaturanScreen({super.key, required this.temaController});
-
-  final TemaController temaController;
+class PengaturanScreen extends ConsumerWidget {
+  const PengaturanScreen({super.key});
 
   static const List<_PilihanTema> _pilihanTema = [
     _PilihanTema(
@@ -34,49 +34,47 @@ class PengaturanScreen extends StatelessWidget {
   ];
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final tema = Theme.of(context);
+    final modeTema = ref.watch(temaProvider).asData?.value ?? ThemeMode.system;
 
-    return AnimatedBuilder(
-      animation: temaController,
-      builder: (context, _) {
-        return ListView(
-          padding: const EdgeInsets.symmetric(vertical: 8),
-          children: [
-            Padding(
-              padding: const EdgeInsets.fromLTRB(16, 8, 16, 4),
-              child: Text(
-                'Tema aplikasi',
-                style: tema.textTheme.titleSmall?.copyWith(
-                  color: tema.colorScheme.primary,
+    return ListView(
+      padding: const EdgeInsets.symmetric(vertical: 8),
+      children: [
+        Padding(
+          padding: const EdgeInsets.fromLTRB(16, 8, 16, 4),
+          child: Text(
+            'Tema aplikasi',
+            style: tema.textTheme.titleSmall?.copyWith(
+              color: tema.colorScheme.primary,
+            ),
+          ),
+        ),
+        RadioGroup<ThemeMode>(
+          groupValue: modeTema,
+          onChanged: (mode) {
+            if (mode == null) {
+              return;
+            }
+            ref.read(temaProvider.notifier).ubah(mode).catchError((
+              Object error,
+            ) {
+              debugPrint('Gagal mengubah mode tema: $error');
+            });
+          },
+          child: Column(
+            children: [
+              for (final pilihan in _pilihanTema)
+                RadioListTile<ThemeMode>(
+                  value: pilihan.mode,
+                  secondary: Icon(pilihan.ikon),
+                  title: Text(pilihan.label),
+                  subtitle: Text(pilihan.deskripsi),
                 ),
-              ),
-            ),
-            RadioGroup<ThemeMode>(
-              groupValue: temaController.modeTema,
-              onChanged: (mode) {
-                if (mode == null) {
-                  return;
-                }
-                temaController.ubahModeTema(mode).catchError((Object error) {
-                  debugPrint('Gagal mengubah mode tema: $error');
-                });
-              },
-              child: Column(
-                children: [
-                  for (final pilihan in _pilihanTema)
-                    RadioListTile<ThemeMode>(
-                      value: pilihan.mode,
-                      secondary: Icon(pilihan.ikon),
-                      title: Text(pilihan.label),
-                      subtitle: Text(pilihan.deskripsi),
-                    ),
-                ],
-              ),
-            ),
-          ],
-        );
-      },
+            ],
+          ),
+        ),
+      ],
     );
   }
 }

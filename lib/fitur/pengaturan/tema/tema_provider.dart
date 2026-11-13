@@ -1,38 +1,37 @@
 import 'package:flutter/material.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+part 'tema_provider.g.dart';
 
 // Mengelola mode tema aplikasi (terang, gelap, atau mengikuti sistem) dan
 // mempersistenkannya ke penyimpanan lokal.
-class TemaController extends ChangeNotifier {
-  TemaController();
-
+@Riverpod(keepAlive: true)
+class TemaNotifier extends _$TemaNotifier {
   static const String KUNCI_MODE_TEMA = 'kunci_mode_tema';
   static const String NILAI_TERANG = 'terang';
   static const String NILAI_GELAP = 'gelap';
   static const String NILAI_SISTEM = 'sistem';
 
-  ThemeMode _modeTema = ThemeMode.system;
-
-  ThemeMode get modeTema => _modeTema;
-
-  // Memuat mode tema tersimpan; default [ThemeMode.system] bila belum ada.
-  Future<void> muatModeTema() async {
+  // Memuat mode tema tersimpan; default [ThemeMode.system] bila belum ada
+  // atau gagal dibaca.
+  @override
+  Future<ThemeMode> build() async {
     try {
       final preferensi = await SharedPreferences.getInstance();
-      _modeTema = _dariNilai(preferensi.getString(KUNCI_MODE_TEMA));
-      notifyListeners();
+      return _dariNilai(preferensi.getString(KUNCI_MODE_TEMA));
     } catch (error) {
       debugPrint('Gagal memuat mode tema: $error');
+      return ThemeMode.system;
     }
   }
 
   // Mengubah mode tema secara langsung dan menyimpannya ke penyimpanan lokal.
-  Future<void> ubahModeTema(ThemeMode mode) async {
-    if (_modeTema == mode) {
+  Future<void> ubah(ThemeMode mode) async {
+    if (state.asData?.value == mode) {
       return;
     }
-    _modeTema = mode;
-    notifyListeners();
+    state = AsyncValue.data(mode);
     try {
       final preferensi = await SharedPreferences.getInstance();
       await preferensi.setString(KUNCI_MODE_TEMA, _keNilai(mode));

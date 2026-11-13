@@ -1,61 +1,35 @@
 import 'package:flutter/material.dart';
 
-import 'package:spektra/fitur/pengaturan/tema/tema_controller.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import 'package:spektra/fitur/pengaturan/tema/tema_provider.dart';
 import 'package:spektra/home.dart';
 
-class MyApp extends StatefulWidget {
+class MyApp extends ConsumerWidget {
   const MyApp({super.key});
 
   @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  final TemaController _temaController = TemaController();
-
-  @override
-  void initState() {
-    super.initState();
-    // Memuat mode tema tersimpan sejak aplikasi dibuka.
-    _temaController.muatModeTema().catchError((Object error) {
-      debugPrint('Gagal memuat mode tema: $error');
-    });
-  }
-
-  @override
-  void dispose() {
-    _temaController.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     const seedColor = Colors.deepPurple;
 
-    return AnimatedBuilder(
-      animation: _temaController,
-      builder: (context, _) {
-        return MaterialApp(
-          title: 'Flutter Demo',
-          theme: ThemeData(
-            useMaterial3: true,
-            colorScheme: ColorScheme.fromSeed(seedColor: seedColor),
-          ),
-          darkTheme: ThemeData(
-            useMaterial3: true,
-            brightness: Brightness.dark,
-            colorScheme: ColorScheme.fromSeed(
-              seedColor: seedColor,
-              brightness: Brightness.dark,
-            ),
-          ),
-          themeMode: _temaController.modeTema,
-          home: MyHomePage(
-            title: 'Flutter Demo Home Page',
-            temaController: _temaController,
-          ),
-        );
-      },
+    final modeTema = ref.watch(temaProvider).asData?.value ?? ThemeMode.system;
+
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(seedColor: seedColor),
+      ),
+      darkTheme: ThemeData(
+        useMaterial3: true,
+        brightness: Brightness.dark,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: seedColor,
+          brightness: Brightness.dark,
+        ),
+      ),
+      themeMode: modeTema,
+      home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
