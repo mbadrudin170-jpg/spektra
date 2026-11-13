@@ -1,2 +1,2 @@
-1. saya ingin menampilkan spesifikasi baterai perangkat user, misalnya berapa mah, apakah terhubung ke cargher.
 2. saya ingin menambahkan pengecekan layar sentuh nya apakah jalan.
+3. New session - 2026-11-13T19:12:39.137Z, kenapa nama sesi nya tidak diubah sesuai konteks

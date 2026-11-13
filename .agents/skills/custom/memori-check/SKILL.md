@@ -1,11 +1,11 @@
 ---
 name: memori-check
-description: "Trigger: setiap interaksi apa pun di proyek ini | Panduan wajib baca MEMORI.md sebelum interaksi dan perbarui bagian relevan setelahnya (kode, dokumen, state). Alur sesi: di awal sesi AI wajib membuat `memori/sesi/sesi_N.md` (status `Belum Sinkron`) dan mencatat sesi tersebut; sebelum membuat berkas sesi baru, AI wajib melakukan **catch-up sync** — memindai `memori/sesi/*.md` ber-status `Belum Sinkron` dari sesi sebelumnya dan menyinkronkannya (yatim/kosong → `Sudah Sinkron` + catatan eksplisit; berisi perubahan → prosedur akhir sesi; ambigu → lapor pengguna). Di akhir sesi AI wajib memperbarui `MEMORI.md` dengan catatan yang relevan lalu menandai berkas sesi `Sudah Sinkron`. Berkas `sesi_N.md` tidak boleh dihapus (diarsipkan permanen). Jangan dilewati walau interaksi tampak kecil."
+description: "Trigger: setiap interaksi apa pun di proyek ini | Panduan wajib baca MEMORI.md sebelum interaksi dan perbarui bagian relevan setelahnya (kode, dokumen, state). Alur sesi: di awal sesi AI wajib membuat `memori/sesi/sesi_N.md` (status `Belum Sinkron`) dan mencatat sesi tersebut; sebelum membuat berkas sesi baru, AI wajib melakukan **catch-up sync** — memindai `memori/sesi/*.md` ber-status `Belum Sinkron` dari sesi sebelumnya dan menyinkronkannya (yatim/kosong → `Sudah Sinkron` + catatan eksplisit; berisi perubahan → prosedur akhir sesi; ambigu → lapor pengguna). Di akhir sesi AI wajib memperbarui `MEMORI.md` dengan catatan yang relevan lalu menandai berkas sesi `Sudah Sinkron`. Berkas `sesi_N.md` tidak boleh dihapus (diarsipkan permanen). Berkas sesi ber-status `Sudah Sinkron` bersifat arsip — DILARANG diubah dengan alasan apa pun; koreksi/tindak lanjut/klarifikasi atas isi berkas sesi lama WAJIB dicatat pada berkas sesi baru (nomor tertinggi + 1) yang merujuk berkas lama. Jangan dilewati walau interaksi tampak kecil."
 metadata:
   kategori: "custom"
-  versi: "1.5.0"
-  diperbarui: "Fri Nov 13 2026 20:53:20 WIB"
-  sumber-terakhir: "perintah pengguna: kerjakan_hasil_diskusi diskusi_1.md — Implementasi langsung"
+  versi: "1.6.0"
+  diperbarui: "Sat Nov 14 2026 02:26:25 WIB"
+  sumber-terakhir: "perintah pengguna: sesi_18 — terapkan aturan agar AI tidak mengubah berkas sesi Sudah Sinkron (buat sesi baru)"
   model: "openrouter/thinkingmachines/inkling-2-small:free"
 ---
 
@@ -16,6 +16,8 @@ Setiap kali model (AI) berinteraksi dengan proyek Flutter "berhenti_merokok", **
 Mulai 2026-11-13, setiap sesi juga wajib dicatat ke berkas sesi `memori/sesi/sesi_N.md` (bernomor, `sesi_1.md`, `sesi_2.md`, …; penomoran nomor tertinggi + 1, gap tidak diisi). Berkas sesi menjadi perantara antara sesi kerja dan `MEMORI.md`: AI tidak boleh mengubah `MEMORI.md` secara langsung tanpa mencatat sesi ke berkas sesi terlebih dahulu, dan di akhir sesi AI wajib memperbarui `MEMORI.md` dengan catatan yang relevan dari berkas sesi lalu menandai berkas sesi `Sudah Sinkron`. Berkas `sesi_N.md` **tidak boleh dihapus** dengan alasan apa pun (diarsipkan permanen).
 
 Pada setiap **awal sesi**, setelah membaca `MEMORI.md` dan sebelum membuat berkas sesi baru, AI wajib melakukan **catch-up sync**: memindai berkas `memori/sesi/*.md` ber-status `Belum Sinkron` milik sesi sebelumnya dan menyinkronkannya. Sinkronisasi akhir sesi tetap dipertahankan sebagai penyelesaian normal; catch-up berfungsi sebagai **jaring pengaman**. Berkas yatim/kosong tanpa perubahan nyata ditandai `Sudah Sinkron` dengan catatan eksplisit "tidak ada perubahan untuk disinkronkan"; berkas berisi perubahan nyata disinkronkan dengan prosedur akhir sesi; bila isi ambigu/tidak dapat diverifikasi → laporkan ke pengguna, jangan diputuskan sendiri. Pemindaian dibatasi pada berkas `Belum Sinkron` saja (bukan seluruh riwayat). Berkas sesi yang sedang aktif di sesi ini tidak boleh ditandai pada langkah catch-up.
+
+Berkas sesi ber-status `Sudah Sinkron` bersifat **arsip permanen** dan DILARANG diubah dengan alasan apa pun (isi, `Status Sinkron`, catatan, tabel `Berkas Terdampak`, maupun bagian lain). Koreksi, klarifikasi, atau tindak lanjut atas isi berkas sesi lama WAJIB dicatat pada berkas sesi **baru** (nomor tertinggi + 1) yang merujuk berkas lama. Yang boleh disentuh hanya berkas ber-status `Belum Sinkron` (catch-up) dan berkas sesi yang sedang aktif di sesi ini.
 
 ## Cakupan yang Di-Cover
 
@@ -47,6 +49,7 @@ Pada setiap **awal sesi**, setelah membaca `MEMORI.md` dan sebelum membuat berka
 9. **Sinkronkan di akhir sesi.** Setelah interaksi yang mengubah proyek selesai, **perbarui bagian yang relevan** di `MEMORI.md` (tentukan berdasarkan isi `MEMORI.md` saat itu, bukan daftar nama bagian yang di-hardcode), tambah entri `memori/riwayat_perubahan.md`, isi bagian `## Sinkronisasi ke MEMORI.md` pada berkas sesi dengan ringkasan penyesuaian, lalu ubah `Status Sinkron` menjadi `Sudah Sinkron`.
 10. **Anggap `MEMORI.md` dan berkas sesi bisa berubah strukturnya.** Bila bagian yang biasa diperbarui tidak ada, tambahkan bagian yang sesuai kebutuhan; bila ada bagian baru, ikuti strukturnya. Jangan menghapus bagian yang tidak relevan dengan interaksi.
 11. **Jika `MEMORI.md` memuat rujukan ke sumber kebenaran lain** (mis. indeks skill atau rules), patuhi rujukan itu dan jangan menggantinya dengan salinan di `MEMORI.md`.
+12. **Berkas sesi `Sudah Sinkron` adalah arsip.** DILARANG mengubah berkas sesi ber-status `Sudah Sinkron` dengan alasan apa pun (isi, `Status Sinkron`, catatan koreksi, tabel `Berkas Terdampak`). Koreksi/klarifikasi/tindak lanjut atas isi berkas sesi lama WAJIB dicatat pada berkas sesi baru (nomor tertinggi + 1) yang merujuk berkas lama; berkas lama tetap apa adanya. Yang boleh diubah hanya: berkas `Belum Sinkron` (catch-up) dan berkas sesi yang sedang aktif di sesi ini.
 
 ## Steps
 
@@ -55,12 +58,14 @@ Pada setiap **awal sesi**, setelah membaca `MEMORI.md` dan sebelum membuat berka
 3. Buat `memori/sesi/sesi_N.md` (format lengkap, status `Belum Sinkron`) — bila folder belum ada, buat foldernya terlebih dahulu.
 4. Selama sesi: perbarui `## Catatan Sesi` dan `## Berkas Terdampak` setiap ada perubahan substantif.
 5. Akhir sesi: perbarui `MEMORI.md` bagian relevan berdasarkan catatan berkas sesi; tambah entri `memori/riwayat_perubahan.md`; isi `## Sinkronisasi ke MEMORI.md`; ubah `Status Sinkron` berkas sesi menjadi `Sudah Sinkron`.
-6. Verifikasi: berkas sesi bernomor benar (`tertinggi + 1`), struktur lengkap, status hasil catch-up sesuai (yatim/kosong ditandai `Sudah Sinkron`), dan `MEMORI.md` konsisten dengan isi berkas sesi.
+6. Verifikasi: berkas sesi bernomor benar (`tertinggi + 1`), struktur lengkap, status hasil catch-up sesuai (yatim/kosong ditandai `Sudah Sinkron`), dan `MEMORI.md` konsisten dengan isi berkas sesi. Selain itu wajib memastikan tidak ada berkas sesi ber-status `Sudah Sinkron` yang berubah: jalankan `git status -- memori/sesi/` dan `git diff -- memori/sesi/` — yang muncul hanya berkas sesi aktif dan (bila ada) berkas `Belum Sinkron` yang disinkronkan lewat catch-up; berkas `Sudah Sinkron` tidak boleh muncul.
 
 ## Larangan
 
 - DILARANG memulai interaksi/task apa pun tanpa membaca `MEMORI.md` terlebih dahulu.
 - DILARANG mengubah `MEMORI.md` secara langsung tanpa mencatat sesi ke `memori/sesi/sesi_N.md` terlebih dahulu (berkas sesi adalah satu-satunya perantara yang sah menuju `MEMORI.md`).
+- DILARANG mengubah berkas `sesi_N.md` ber-status `Sudah Sinkron` dengan alasan apa pun, termasuk menambahkan catatan koreksi/klarifikasi ke dalamnya; berkas tersebut arsip, dan koreksi WAJIB dicatat pada berkas sesi baru (nomor tertinggi + 1) yang merujuk berkas lama. Yang boleh disentuh hanya berkas `Belum Sinkron` (catch-up) dan berkas sesi yang sedang aktif di sesi ini.
+- DILARANG pola "hapus lalu buat ulang" untuk "membetulkan" berkas sesi lama; berkas sesi tidak boleh dihapus, koreksi bersifat aditif di berkas sesi baru.
 - DILARANG menghapus berkas `sesi_N.md` dengan alasan apa pun, termasuk setelah `Sudah Sinkron` (diarsipkan permanen). Permintaan penghapusan dari pihak mana pun harus ditolak atau dikembalikan kepada pengguna untuk konfirmasi eksplisit luar biasa yang terdokumentasi.
 - DILARANG menandai berkas sesi yang sedang aktif di sesi ini sebagai `Sudah Sinkron` pada langkah catch-up.
 - DILARANG memutuskan sendiri bila isi berkas sesi yang disinkronkan lewat catch-up ambigu atau tidak dapat diverifikasi — laporkan ke pengguna.
@@ -98,6 +103,32 @@ Catch-up sync pada awal sesi (setelah membaca MEMORI.md, sebelum membuat berkas 
    - sesi_aktif_sesi_ini.md -> JANGAN ditandai
    - isi ambigu / sesi paralel -> laporkan ke pengguna, jangan diputuskan sendiri
 3. Buat memori/sesi/sesi_9.md (nomor tertinggi + 1) ...
+```
+
+Koreksi/klarifikasi atas isi berkas sesi lama yang sudah `Sudah Sinkron` (buat berkas sesi baru, jangan sentuh berkas lama):
+
+```markdown
+1. Baca MEMORI.md, lalu sesi_15.md (Status Sinkron: Sudah Sinkron) yang catatannya keliru
+2. JANGAN mengedit sesi_15.md — berkas itu arsip
+3. Buat memori/sesi/sesi_18.md (nomor tertinggi + 1): catat koreksi + rujuk baris/bagian sesi_15.md yang dikoreksi
+4. Isi Berkas Terdampak dan Sinkronisasi ke MEMORI.md; tandai sesi_18.md Sudah Sinkron pada akhir sesi
+```
+
+```markdown
+// DILARANG: mengedit berkas sesi yang sudah Sudah Sinkron untuk "mengoreksi" isinya
+// Salah: "catatan catch-up di sesi_15.md keliru, jadi sesi_15.md saya edit saja agar benar"
+// Benar: buat sesi_18.md (nomor tertinggi + 1), catat koreksinya di sana dengan rujukan ke sesi_15.md
+```
+
+```markdown
+// DILARANG: menganggap berkas sesi lama boleh disentuh karena "hanya menambahkan catatan kecil"
+// Salah: "cuma tambah satu baris koreksi ke sesi_13.md yang sudah Sudah Sinkron, tidak apa-apa"
+// Benar: berkas Sudah Sinkron = arsip; setiap koreksi dicatat di berkas sesi baru
+```
+
+```markdown
+// DILARANG: pola hapus lalu buat ulang untuk membetulkan berkas sesi lama
+// Salah: "sesi_9.md isinya salah, saya hapus lalu buat lagi dengan konten yang benar"
 ```
 
 ## Contoh Salah
@@ -147,4 +178,5 @@ MaterialApp(
 - Commit rujukan: `1823940` (chore(agents): perluas kewajiban pemeriksaan MEMORI.md ke seluruh interaksi proyek), `5e2a55d` (docs(agents): perbarui path hasil diskusi ke prd/hasil_diskusi), `b7f2b05` (docs(memori): lengkapi catatan proyek dan tata ulang arsip diskusi)
 - Skill terkait: `aturan-pembuatan-skill`, `validasi-platform-izin`, `gaya`, `penamaan-konvensi`
 - Keputusan rujukan: `hasil_diskusi/diskusi_8.md` (K-1..K-11; alur sesi, larangan penghapusan berkas sesi), `hasil_diskusi/diskusi_1.md` (K-1..K-9, R-1..R-4; catch-up sync awal sesi)
+- Rujukan perintah pengguna: sesi_18 (2026-11-14; berkas sesi `Sudah Sinkron` bersifat arsip — koreksi/tindak lanjut dicatat di berkas sesi baru)
 - Catatan: skill ini memuat alur sesi (bukan hanya struktur `MEMORI.md`); pembaruan berikutnya untuk perubahan alur sesi mengikuti `aturan_skill.md`.

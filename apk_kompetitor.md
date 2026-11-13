@@ -66,6 +66,9 @@
 | CPU Monitor - temperature (Stark) | Monitor suhu dan frekuensi CPU multi-core dengan analisis riwayat, floating window suhu CPU/baterai dan pemakaian RAM, serta widget CPU, baterai, dan RAM. | Google Play Store | [Buka Aplikasi](https://play.google.com/store/apps/details?id=com.glgjing.stark) | Belum Dianalisa |
 | System Monitor Cpu Ram Battery | Monitor suhu/frekuensi CPU realtime, kurva penggunaan dan suhu baterai, alarm overheat, floating window (suhu CPU, suhu baterai, RAM), serta widget RAM/CPU/baterai. | Google Play Store | [Buka Aplikasi](https://play.google.com/store/apps/details?id=com.glgjing.marvel) | Belum Dianalisa |
 | Floating Monitor for Cpu Ram | Floating window ringkas yang menampilkan suhu dan frekuensi CPU, pemakaian CPU, RAM, dan level baterai secara realtime, berguna saat bermain game layar penuh. | Google Play Store | [Buka Aplikasi](https://play.google.com/store/apps/details?id=com.glgjing.floating.cpu.ram.monitor) | Belum Dianalisa |
+| Device Info (App build studio) | Aplikasi info dan diagnostik perangkat: dashboard RAM/penyimpanan/baterai/CPU/aplikasi, detail hardware & OS (model, manufacturer, board, hardware, Android version, patch keamanan, kernel), pengujian hardware (layar deadlock pixel, multi-touch, speaker, mikrofon, senter, Wi-Fi/Bluetooth). | Google Play Store | [Buka Aplikasi](https://play.google.com/store/apps/details?id=com.appbuildstudio.deviceinfo) | Belum Dianalisa |
+| Device Info, Device Hardware & | Aplikasi info perangkat dan hardware sederhana: informasi lengkap hardware dan software perangkat Android dengan antarmuka sederhana. | Google Play Store | [Buka Aplikasi](https://play.google.com/store/apps/details?id=com.devicehardware.deviceinfohw) | Belum Dianalisa |
+
 
 ## F-Droid
 
@@ -196,5 +199,78 @@
 | Amperes Battery Charging Lite | Versi ringan Amperes: monitoring arus pengisian baterai realtime. | Apple App Store | [Buka Aplikasi](https://apps.apple.com/us/app/amperes-battery-charging-lite/id1253789580) | Belum Dianalisa |
 | Battery Life Health Doctor Pro | Aplikasi kesehatan baterai Pro: kondisi, kapasitas, dan perkiraan masa pakai baterai. | Apple App Store | [Buka Aplikasi](https://apps.apple.com/us/app/battery-life-health-doctor-pro/id1180887748) | Belum Dianalisa |
 | Amperes 4: Battery Charge Info | Aplikasi Amperes 4: monitoring arus/pengisian baterai realtime (versi iOS). | Apple App Store | [Buka Aplikasi](https://apps.apple.com/us/app/amperes-4-battery-charge-info/id1245475416) | Belum Dianalisa |
+
+## Samsung Galaxy Store
+
+| Nama Aplikasi | Ringkasan Singkat | Store | Link | Status Analisa |
+| ------------- | ----------------- | ----- | ---- | -------------- |
+| Device Info: System & CPU Info | Informasi lengkap perangkat (model, hardware, sistem, OS, kernel, CPU/GPU, RAM, penyimpanan, baterai, jaringan, tampilan, kamera, sensor), pemantauan data realtime, uji hardware dan benchmark. | Samsung Galaxy Store | [Buka Aplikasi](https://galaxystore.samsung.com/detail/com.ytheekshana.deviceinfo?cntyCd=IDN) | Belum Dianalisa |
+| Device Info | Detail spesifikasi hardware dan sistem (prosesor, RAM, penyimpanan, layar, baterai, sensor), properti sistem (Android, API, kernel, build), status baterai, dan data sensor realtime. | Samsung Galaxy Store | [Buka Aplikasi](https://galaxystore.samsung.com/detail/com.loll.devinfo?cntyCd=IDN) | Belum Dianalisa |
+| CPU Info: Device & Battery | Informasi hardware menyeluruh (CPU inti/frekuensi, GPU, memori, penyimpanan, layar, kamera, sensor, jaringan, termal), kesehatan baterai, pengujian hardware dan ekspor laporan. | Samsung Galaxy Store | [Buka Aplikasi](https://galaxystore.samsung.com/detail/app.deviceinfo.cpu.hardware.monitor?cntyCd=IDN) | Belum Dianalisa |
+| Display info: Android info | Info umum perangkat, layar (resolusi, densitas, orientasi, HDR), hardware/prosesor/GPU, sistem (Android, API, build, kernel, OpenGL ES), serta status baterai dan sensor. | Samsung Galaxy Store | [Buka Aplikasi](https://galaxystore.samsung.com/detail/pe.netdreams.displayinfo?cntyCd=IDN) | Belum Dianalisa |
+| Battery Doctor - Battery Life Saver & CPU Monitor Cleaner Manager | Memantau kesehatan dan statistik baterai (suhu, kapasitas, riwayat pengisian), kinerja/suhu CPU, serta informasi hardware dan memori sistem. | Samsung Galaxy Store | [Buka Aplikasi](https://galaxystore.samsung.com/detail/com.tool.batteryusage.chargerlifepro?cntyCd=IDN) | Belum Dianalisa |
+| Battery Temperature - Overheat Alert | Memantau suhu baterai realtime melalui aplikasi/notifikasi/status bar, alarm panas berlebih, pencatatan suhu ke CSV, perlindungan kesehatan baterai. | Samsung Galaxy Store | [Buka Aplikasi](https://galaxystore.samsung.com/detail/com.galaxy.app.battery.temperature?cntyCd=IDN) | Belum Dianalisa |
+| AnTuTu Benchmark | Benchmark perangkat komprehensif: CPU, memori/penyimpanan, UX, dan GPU (versi Galaxy Store dari AnTuTu yang dihapus dari Play Store). | Samsung Galaxy Store | [Buka Aplikasi](https://galaxystore.samsung.com/detail/com.antutu.ABenchMark?cntyCd=IDN) | Belum Dianalisa |
+| Antutu 3DBench | Alat benchmark grafis/GPU 3D dengan skenario render canggih untuk mengukur kemampuan grafis perangkat. | Samsung Galaxy Store | [Buka Aplikasi](https://galaxystore.samsung.com/detail/com.antutu.benchmark.full?cntyCd=IDN) | Belum Dianalisa |
+| Android Updates - Latest Version | Menampilkan informasi perangkat (model, chipset, CPU, layar, RAM, penyimpanan, kamera, kernel, One UI), status baterai, jaringan, serta sensor dengan pembacaan langsung. | Samsung Galaxy Store | [Buka Aplikasi](https://galaxystore.samsung.com/detail/com.moussa.updatess?cntyCd=IDN) | Belum Dianalisa |
+
+## Mi GetApps (小米应用商店)
+
+| Nama Aplikasi | Ringkasan Singkat | Store | Link | Status Analisa |
+| ------------- | ----------------- | ----- | ---- | -------------- |
+| 设备详情-查看手机硬件和软件 (Detail Perangkat) | Aplikasi info perangkat: CPU, memori, penyimpanan, baterai, sensor, aplikasi, OS, layar; pengujian hardware (senter, speaker, earpiece, tombol, getar, multi-touch, sensor cahaya, akselerometer), info baterai (arus, suhu, kesehatan), dan daftar sensor (konsumsi daya, jangkauan, resolusi, produsen). | Mi GetApps | [Buka Aplikasi](https://app.mi.com/details?id=com.jiaxue.deviceinfo) | Belum Dianalisa |
+| 开发助手-安卓开发工具 (Developer Assistant) | Alat pengembang Android: decompiler, layout viewer, color picker, riwayat Activity, ekstrak APK, dan info sistem cepat (versi, hardware, layar, CPU, VM, jaringan, ID). Relevan sebagai referensi alat info sistem/diagnostik. | Mi GetApps | [Buka Aplikasi](https://app.mi.com/details?id=cn.trinea.android.developertools) | Belum Dianalisa |
+| 信号检测仪 (Signal Detector) | Alat deteksi sinyal all-in-one: monitoring kekuatan sinyal ponsel/SIM, Wi-Fi (MAC, kanal, IP, rate, keamanan), Bluetooth, GPS/satelit, medan magnet; pembacaan sensor realtime (suhu, kompas, barometer), ping test, route tracing, dan deteksi noise. | Mi GetApps | [Buka Aplikasi](https://app.mi.com/details?id=com.lefan.signal) | Belum Dianalisa |
+| Cellular-Pro | Alat pengukuran jaringan profesional: kunci LTE BAND/frekuensi/PCI, parameter pengukuran nirkabel 5G/LTE/GSM/WCDMA, layer 3 message, dan tes kecepatan. Relevan untuk uji jaringan. | Mi GetApps | [Buka Aplikasi](https://app.mi.com/details?id=make.more.r2d2.cellular_pro) | Belum Dianalisa |
+| GPS Status | Aplikasi info GPS dan sensor: data satelit (posisi, kekuatan sinyal, akurasi), akselerometer, kompas, kecepatan, ketinggian, arah, serta pengukuran medan magnet. Relevan untuk pengujian sensor dan konektivitas. | Mi GetApps | [Buka Aplikasi](https://app.mi.com/details?id=com.eclipsim.gpsstatus) | Belum Dianalisa |
+
+## Amazon Appstore
+
+> Catatan: Amazon Appstore untuk perangkat Android umum telah dihentikan pada 20 Agustus 2025; distribusi berlanjut di Fire OS/Vega OS (Fire Tablet, Fire TV), yang berbasis Android.
+
+| Nama Aplikasi | Ringkasan Singkat | Store | Link | Status Analisa |
+| ------------- | ----------------- | ----- | ---- | -------------- |
+| Device Info for Fire Tablet | Alat info hardware dan software untuk Amazon Fire Tablet (Fire OS, berbasis Android): deteksi prosesor/model, dimensi layar & densitas piksel, monitoring level & suhu baterai, versi Android/Fire OS, penggunaan memori & penyimpanan, identifikasi model Fire Tablet, dan polling sensor. | Amazon Appstore | [Buka Aplikasi](https://www.amazon.com/Device-Info-for-Fire-Tablet/dp/B0BJ97FWKB) | Belum Dianalisa |
+
+## APKPure
+
+| Nama Aplikasi | Ringkasan Singkat | Store | Link | Status Analisa |
+| ------------- | ----------------- | ----- | ---- | -------------- |
+| AnTuTu Benchmark | Benchmark perangkat komprehensif (CPU, GPU, memori, penyimpanan, UX, tile) sebagai referensi pembanding performa; satu skor untuk membandingkan antar perangkat. | APKPure | [Buka Aplikasi](https://apkpure.net/antutu-benchmark/com.antutu.ABenchMark) | Belum Dianalisa |
+| AIDA64 | Info sistem lengkap: deteksi CPU realtime, layar, baterai, jaringan Wi-Fi/seluler, OS, GPU, memori/penyimpanan, sensor, monitor GPU/XModule — resmi rilis APK. | APKPure | [Buka Aplikasi](https://apkpure.net/aida64/com.finalwire.aida64) | Belum Dianalisa |
+| CPU-Z | Info SoC (nama, arsitektur, clock tiap inti), perangkat (merek/model/resolusi/RAM/penyimpanan), baterai (level/status/suhu/kapasitas), sensor, dan validasi online. | APKPure | [Buka Aplikasi](https://apkpure.net/cpu-z/com.cpuid.cpu_z) | Belum Dianalisa |
+| DevCheck Device & System Info | Dashboard realtime CPU/memori/baterai/uptime, spesifikasi hardware lengkap, detail sistem (kernel, patch keamanan, root), diagnostik jaringan (Wi-Fi/seluler/dual-SIM/IP publik), kesehatan baterai, dan grafik sensor live. | APKPure | [Buka Aplikasi](https://apkpure.net/devcheck/flar2.devcheck) | Belum Dianalisa |
+| Device Info HW | Deteksi komponen hardware (layar/sentuh/kamera/LCD/multi-touch), SoC (core/cluster/governor/frekuensi/GPU), baterai (arus/profil), termal, memori/flash, konektivitas, codec/DRM, dan info sistem lengkap. | APKPure | [Buka Aplikasi](https://apkpure.net/device-info-hw/ru.andr7e.deviceinfohw) | Belum Dianalisa |
+| Geekbench 7 | Benchmark CPU single/multi-core dan GPU (OpenCL/Metal/Vulkan/CUDA) dengan perbandingan lintas perangkat dan unggahan hasil ke Geekbench Browser. | APKPure | [Buka Aplikasi](https://apkpure.net/geekbench/com.primatelabs.parkdale) | Belum Dianalisa |
+
+## Aptoide
+
+| Nama Aplikasi | Ringkasan Singkat | Store | Link | Status Analisa |
+| ------------- | ----------------- | ----- | ---- | -------------- |
+| AnTuTu Benchmark | Benchmark perangkat komprehensif (CPU, GPU, RAM, penyimpanan, UX, HTML5) dengan satu skor pembanding antar perangkat; de facto standar benchmark industri. | Aptoide | [Buka Aplikasi](https://antutu-benchmark.en.aptoide.com/app) | Belum Dianalisa |
+| Device Info (Device ID) | Info perangkat offline tanpa internet: Android ID, IMEI/IMSI, GSF ID, Advertising ID, serial, SoC/CPU, GPU, info layar (resolusi/density/multi-touch), fingerprint build. | Aptoide | [Buka Aplikasi](https://device-info-good-apps-games.en.aptoide.com/app) | Belum Dianalisa |
+| SIM Device Info | Info kartu SIM (nomor seri SIM, IMSI, IMEI) dan info hardware & software perangkat (OS, build) untuk troubleshooting koneksi. | Aptoide | [Buka Aplikasi](https://sim-device-info-sadens-studio.en.aptoide.com/app) | Belum Dianalisa |
+| Phone Info – Device Info | Info sistem & hardware perangkat: RAM, penyimpanan, SD card, sensor, prosesor (Bogo MIPS, implementer, architecture), nama/model perangkat. | Aptoide | [Buka Aplikasi](https://phone-info-mgetech.en.aptoide.com/app) | Belum Dianalisa |
+| Device Info & ID - Hardware | Info hardware & software lengkap: termal, USB, audio, Bluetooth, NFC; OS version, SDK, security patch, kernel, bootloader, fingerprint, ABI, SELinux, properti sistem, dan device ID. | Aptoide | [Buka Aplikasi](https://change-device-id.en.aptoide.com/app) | Belum Dianalisa |
+| Device Info - HW, SW | Info perangkat: build properties/OS, jaringan mobile, detail kamera, dan pengujian GPS. | Aptoide | [Buka Aplikasi](https://pacmac-device-info.en.aptoide.com/app) | Belum Dianalisa |
+| My Device Info (ShagWorld) | Info perangkat utama: Android name/version, daftar aplikasi (sistem & user), memori phone/SD, koneksi internet, RAM, kamera, ukuran layar & density, manufacturer dan model. | Aptoide | [Buka Aplikasi](https://my-android-info.en.aptoide.com/app) | Belum Dianalisa |
+| Device Info HW | Aplikasi info hardware & software untuk mendeteksi komponen ponsel (LCD, touchscreen, kamera, sensor, memori, flash, audio, NFC, charger, Wi-Fi, baterai); package `ru.andr7e.deviceinfohw`, 5M+ unduhan. | Aptoide | [Buka Aplikasi](https://device-info-hw.en.aptoide.com/app) | Belum Dianalisa |
+| USB Device Info | Aplikasi info perangkat USB: data deskriptor USB (endpoints, interfaces, serial USB API & Linux mode), informasi perangkat yang terhubung. | Aptoide | [Buka Aplikasi](https://usb-device-info.en.aptoide.com/app) | Belum Dianalisa |
+| My Device Info (GiggleGenius) | Info realtime perangkat: layar (resolusi, dimensi, aspect ratio), OS (versi & API level), CPU (SoC, core, fabrikasi, GPU), dan tes perangkat. | Aptoide | [Buka Aplikasi](https://device-info-gigglegenius.en.aptoide.com/app) | Belum Dianalisa |
+
+
+
+## IzzyOnDroid
+
+| Nama Aplikasi | Ringkasan Singkat | Store | Link | Status Analisa |
+| ------------- | ----------------- | ----- | ---- | -------------- |
+| PerfMon+ | Performance monitor sederhana untuk Android: jendela mengambang dengan detail performa — CPU freq/loading, GPU freq/loading, cache CPU, penggunaan memori realtime. | IzzyOnDroid | [Buka Aplikasi](https://apt.izzysoft.de/packages/xzr.perfmon/) | Belum Dianalisa |
+| RvSystem Monitor | System monitor performa tinggi untuk Android (Jetpack Compose + Rust backend): wawasan realtime dengan dampak performa minimal; monitoring hardware tingkat rendah. | IzzyOnDroid | [Buka Aplikasi](https://apt.izzysoft.de/packages/com.rve.systemmonitor/) | Belum Dianalisa |
+| RvKernel Manager | Alat open-source manajemen kernel Android: kontrol penuh parameter kernel, tuning performa/masa pakai baterai, plus dashboard informasi perangkat dan monitoring. | IzzyOnDroid | [Buka Aplikasi](https://apt.izzysoft.de/packages/com.rve.rvkernelmanager/) | Belum Dianalisa |
+| Wattz | Indikator baterai realtime di status bar: metrik konsumsi daya dan pengisian baterai realtime, dengan detail metrik baterai di dalam aplikasi. | IzzyOnDroid | [Buka Aplikasi](https://apt.izzysoft.de/packages/dubrowgn.wattz/) | Belum Dianalisa |
+| DevStat | Alat membantu debugging masalah perangkat: kueri informasi perangkat (fitur AndroidManifest, device data) untuk laporan yang bisa dikirim via email. | IzzyOnDroid | [Buka Aplikasi](https://apt.izzysoft.de/packages/uk.co.ianfield.devstat/) | Belum Dianalisa |
+
+
+
 
 

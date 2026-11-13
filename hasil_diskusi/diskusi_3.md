@@ -2,7 +2,7 @@
 
 ## Status
 - Dokumen: Final
-- Implementasi: Belum Diimplementasikan
+- Implementasi: Sedang Diimplementasikan
 - Tanggal: 2026-11-13
 - Topik: Riset aplikasi mobile serupa Spektra (info/diagnostik perangkat) di berbagai store (GitHub, F-Droid, Google Play Store, Apple App Store, Samsung Galaxy Store, Mi Store/GetApps, Oppo App Market, dan store lainnya) untuk ditambahkan ke `apk_kompetitor.md`; perintah dijalankan satu store per iterasi (Play Store dulu), bukan sekaligus
 
@@ -66,8 +66,8 @@ Fakta yang relevan:
 ## Tindak Lanjut
 | No | Tindakan | File Terdampak | Status |
 |----|----------|----------------|--------|
-| 1  | Jalankan riset **Google Play Store** (hanya mobile; kata kunci info/diagnostik/monitoring perangkat; sebanyak mungkin), verifikasi link independen, buat `apk_kompetitor.md` baru dan isi listing (`Status Analisa = Belum Dianalisa`) | `apk_kompetitor.md` (Dibuat) | belum |
-| 2  | Lanjut riset store berikutnya **satu per satu** (mis. F-Droid, GitHub, App Store, Samsung Galaxy Store, Mi/GetApps, Oppo App Market, lainnya); setelah tiap store, perbarui `apk_kompetitor.md` sebelum lanjut | `apk_kompetitor.md` | belum |
+| 1  | Jalankan riset **Google Play Store** (hanya mobile; kata kunci info/diagnostik/monitoring perangkat; sebanyak mungkin), verifikasi link independen, buat `apk_kompetitor.md` baru dan isi listing (`Status Analisa = Belum Dianalisa`) | `apk_kompetitor.md` (Dibuat) | selesai |
+| 2  | Lanjut riset store berikutnya **satu per satu** (mis. F-Droid, GitHub, App Store, Samsung Galaxy Store, Mi/GetApps, Oppo App Market, lainnya); setelah tiap store, perbarui `apk_kompetitor.md` sebelum lanjut | `apk_kompetitor.md` | setengah |
 | 3  | Perbarui `.kilo/commands/cari_apk_kompetitor.md` agar memuat aturan satu-per-satu store (R-2) | `.kilo/commands/cari_apk_kompetitor.md` | selesai |
 | 4  | Selaraskan `.agents/skills/custom/riset-kompetitor/SKILL.md` ke konteks Spektra (R-1) | `.agents/skills/custom/riset-kompetitor/SKILL.md` | selesai |
 | 5  | Commit hasil riset per batch store dengan pesan `docs: ...` (R-7) | git | belum |
@@ -80,7 +80,7 @@ Fakta yang relevan:
 | `memori/sesi/sesi_2.md` | Diubah | Ditandai `Sudah Sinkron` (catch-up; perubahan tidak dapat diverifikasi) |
 | `MEMORI.md` | Diubah | Sinkronisasi akhir sesi (lokasi hasil diskusi, riwayat diskusi, status sesi, catatan acuan riset Spektra) |
 | `memori/riwayat_perubahan.md` | Diubah | Entri riwayat perubahan |
-| `apk_kompetitor.md` | Belum dibuat | Dibuat saat perintah riset dijalankan (tindak lanjut) |
+| `apk_kompetitor.md` | Dibuat | Dibuat sesi_13 (Play Store 56 + F-Droid 16, 2026-11-13) dan dilanjutkan sesi paralel (GitHub 22 + Apple App Store 77); seluruh listing `Status Analisa = Belum Dianalisa`; 171/171 link terverifikasi (sesi_15, 2026-11-14) |
 | `.kilo/commands/cari_apk_kompetitor.md` | Diubah | Tambah blok aturan satu store per iterasi, acuan Spektra, dan struktur `apk_kompetitor.md` (kerangka skill) — tindak lanjut R-2, selesai 2026-11-13 |
 | `.agents/skills/custom/riset-kompetitor/SKILL.md` | Diubah | Penyelarasan dari konteks berhenti merokok ke Spektra (in-place, v1.5.0) — tindak lanjut R-1, selesai 2026-11-13 |
 
@@ -92,3 +92,4 @@ Belum ada
 |---------|-----------|
 | 2026-11-13 | Berkas dibuat dari diskusi mode diskusi; keputusan K-1 s.d. K-8; catatan catch-up `sesi_2.md`; pertanyaan terbuka dicatat. |
 | 2026-11-13 | Pertanyaan terbuka ditutup: (1) penanganan skill riset-kompetitor — diperbarui in-place ke konteks Spektra (v1.5.0, bukan skill pendamping) (R-1 selesai); (2) `.kilo/commands/cari_apk_kompetitor.md` diubah sekarang (R-2 selesai); (3) urutan store setelah Play Store ditetapkan: F-Droid → GitHub → Apple App Store → Samsung/Mi/Oppo/lainnya; (4) struktur `apk_kompetitor.md` ditetapkan mengikuti kerangka skill (section per store, tabel pipe Markdown, kolom `Status Analisa`). Tindak Lanjut item 3 & 4 ditandai `selesai`; item 1 (riset Play Store + `apk_kompetitor.md`), item 2 (store berikutnya), dan item 5 (commit `docs:`) masih `belum`. Dilaksanakan lewat tindak lanjut hasil diskusi (sesi_10). |
+| 2026-11-14 | Implementasi → `Sedang Diimplementasikan`. Riset dikerjakan sesi paralel (sesi_13): Google Play Store 56 listing + F-Droid 16 listing (2026-11-13), disusul GitHub 22 listing dan Apple App Store 77 listing; seluruh listing `Status Analisa = Belum Dianalisa`; seluruh 171 link terverifikasi valid (curl HTTP 200 untuk Play Store/F-Droid/GitHub; iTunes `lookup` `resultCount: 77` untuk Apple App Store) oleh sesi_15 (2026-11-14; 4 URL F-Droid sempat gagal sesaat pada probe paralel dan valid pada probe ulang). Tindak Lanjut item 1 ditandai `selesai`; item 2 ditandai `setengah` (F-Droid, GitHub, Apple App Store selesai; Samsung Galaxy Store, Mi/GetApps, Oppo App Market, dan store lain belum); item 5 (commit `docs: ...`) belum — commit `0616da4` ("s", 2026-11-13 19:11 UTC, oleh sesi paralel) memuat riset + perubahan lain sekaligus (antara lain penghapusan `diskusi_1.md`) dengan pesan di luar konvensi `docs: ...`; di luar kendali sesi ini. Diperbarui lewat tindak lanjut hasil diskusi (sesi_15) |
