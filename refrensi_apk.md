@@ -60,18 +60,14 @@
 
 ### A4. Tes diagnostik komponen interaktif (layar sentuh, dead pixel, audio, kamera, tombol, getar, senter)
 
-- **Temuan:** Test Your Android (35+ tes: warna layar, multi-touch, piksel mati, refresh rate, speaker/mikrofon/getar, kamera, sidik jari, root check), ytheekshana (Hardware Tests: ~15 tes), DevCheck (sentrifugal, getar, tombol, multi-touch, layar, speaker, mikrofon), Device Test. Keluhan Spektra (`keluhan.md`) secara eksplisit menyebut uji layar sentuh.
-- **Tujuan:** Memenuhi kebutuhan diagnostik terdokumentasi (layar sentuh) sekaligus menjadi nilai utama aplikasi; pola "pilih tes → jalankan → lulus/gagal" terbukti mudah dipahami.
-- **Referensi:** [Test Your Android](https://play.google.com/store/apps/details?id=hibernate.v2.testyourandroid), [Device Info: System & CPU Info (ytheekshana)](https://play.google.com/store/apps/details?id=com.ytheekshana.deviceinfo), [DevCheck](https://play.google.com/store/apps/details?id=flar2.devcheck)
-- **Saran:** Mulai dari tes layar (warna penuh, dead pixel, multi-touch, kecerahan) + tes audio (speaker/mikrofon loopback) + tes getar/tombol/senter; alur menu grid ikon besar → layar tes → hasil per tes; tambahkan ringkasan hasil akhir (celah yang tidak dimiliki Test Your Android); minta izin runtime hanya saat tes terkait dijalankan.
+<!-- PRD: prd_tes_diagnostik.md -->
+Sudah dibuatkan PRD-nya: `prd/prd_tes_diagnostik.md` (dibuat 2026-11-14). Isi section ini telah dipindahkan ke PRD tersebut; bagian ini hanya penanda.
 - **Prioritas:** Tinggi.
 
 ### A5. Info memori & penyimpanan
 
-- **Temuan:** Seluruh kompetitor (DevCheck, AIDA64, CPU-Z, Droid Hardware Info, Castro, Device Watch) menampilkan RAM total/terpakai dan kapasitas/tipe penyimpanan.
-- **Tujuan:** Satu dari tiga pilar spesifikasi dasar (CPU/RAM/penyimpanan) yang diharapkan pengguna "Know Your Device".
-- **Referensi:** [DevCheck](https://play.google.com/store/apps/details?id=flar2.devcheck), [AIDA64](https://play.google.com/store/apps/details?id=com.finalwire.aida64), [CPU-Z](https://play.google.com/store/apps/details?id=com.cpuid.cpu_z), [Castro](https://play.google.com/store/apps/details?id=com.itemstudio.castro)
-- **Saran:** RAM: total/terpakai realtime; penyimpanan: internal/eksternal, terpakai/bebas; tipe memori bila terbaca (LPDDR) dengan fallback `Tidak diketahui`.
+<!-- PRD: prd_info_memori_penyimpanan.md -->
+Sudah dibuatkan PRD-nya: `prd/prd_info_memori_penyimpanan.md` (dibuat 2026-11-14). Isi section ini telah dipindahkan ke PRD tersebut; bagian ini hanya penanda.
 - **Prioritas:** Tinggi.
 
 ### A6. Info sistem/OS (kernel, build, patch keamanan, root check)
