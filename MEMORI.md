@@ -42,16 +42,17 @@ Belum diketahui. Dokumen `docs/struktur_proyek.md` dan `docs/rencana_integrasi_p
 - Working tree tidak bersih per 2026-11-14 WIB (perubahan belum di-commit: `.kilo/commands/mode/mode_diskusi.md`, `hasil_diskusi/diskusi_1.md`, `MEMORI.md`, `memori/riwayat_perubahan.md`, `memori/sesi/sesi_3.md`); 3 commit: `1fb6840` (Initial commit), `4078d78` (konfigurasi linting kustom), `90f66d8` (as).
 
 ## Lokasi Hasil Diskusi
-Folder `hasil_diskusi/` di root proyek. Berkas: `diskusi_1.md` (nomor tertinggi: 1).
+Folder `hasil_diskusi/` di root proyek. Berkas: `diskusi_1.md`, `diskusi_2.md` (nomor tertinggi: 2).
 
 ## Riwayat Diskusi
 - `diskusi_1.md` (2026-11-14) — Argumen `$ARGUMENTS` pada `.kilo/commands/mode/mode_diskusi.md`; Dokumen: Final; Implementasi: Sudah Diimplementasikan. Tindak lanjut: selesai (bagian `## Argumen` ditambahkan); mirror `gpt/` belum disinkronkan (menunggu permintaan pengguna).
+- `diskusi_2.md` (2026-11-13) — Menampilkan spesifikasi baterai perangkat (keluhan.md); Dokumen: Draft; Implementasi: Belum Diimplementasikan. Keputusan: Android-only, bagian halaman statistik, snapshot saat ini/manual refresh, kapasitas desain mAh (fallback `Tidak diketahui`), package `battery_info_v2`; halaman statistik belum ada di `lib/`/`docs/` (pertanyaan terbuka). Tindak lanjut belum dimulai.
 
 ## Riwayat Perubahan
 Lihat `memori/riwayat_perubahan.md`.
 
 ## Lokasi Berkas Sesi
-`memori/sesi/sesi_N.md` (diarsipkan permanen). Nomor tertinggi saat ini: 3 (`sesi_3.md`). Catatan: `sesi_2.md` masih ber-status `Belum Sinkron` (mengklaim `apk_kompetitor.md` dibuat, tetapi berkas tidak ada dan `git status` bersih; tidak dapat diverifikasi — menunggu keputusan pengguna).
+`memori/sesi/sesi_N.md` (diarsipkan permanen). Nomor tertinggi saat ini: 4 (`sesi_4.md`). Catatan: `sesi_2.md` masih ber-status `Belum Sinkron` (mengklaim `apk_kompetitor.md` dibuat, tetapi berkas tidak ada dan `git status` bersih; tidak dapat diverifikasi — menunggu keputusan pengguna).
 
 ## Catatan untuk Model Selanjutnya
 - Jangan mengarang status pengembangan atau tujuan produk; bagian yang belum diverifikasi wajib ditandai "Belum diketahui".
