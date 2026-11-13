@@ -6,6 +6,7 @@
 // membutuhkannya, dan tidak dibuka di sini. Override notifier statistik
 // dipakai karena IndexedStack membangun seluruh tab sejak frame pertama.
 
+import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -55,6 +56,12 @@ void main() {
   testWidgets(
     'Tab Dashboard memuat kartu Tes Diagnostik dan navigasi ke grid',
     (WidgetTester tester) async {
+      // GridView membangun kartu secara lazy; perbesar permukaan test agar
+      // seluruh 9 kartu terlihat tanpa scroll.
+      tester.view.physicalSize = const Size(800, 1200);
+      tester.view.devicePixelRatio = 1.0;
+      addTearDown(tester.view.resetPhysicalSize);
+
       await tester.pumpWidget(
         ProviderScope(
           overrides: [

@@ -56,12 +56,6 @@
 Sudah dibuatkan PRD-nya: `prd/prd_info_cpu_soc_gpu.md` (dibuat 2026-11-14). Isi section ini telah dipindahkan ke PRD tersebut; bagian ini hanya penanda.
 - **Prioritas:** Tinggi.
 
-### A4. Tes diagnostik komponen interaktif (layar sentuh, dead pixel, audio, kamera, tombol, getar, senter)
-
-<!-- PRD: prd_tes_diagnostik.md -->
-Sudah dibuatkan PRD-nya: `prd/prd_tes_diagnostik.md` (dibuat 2026-11-14). Isi section ini telah dipindahkan ke PRD tersebut; bagian ini hanya penanda.
-- **Prioritas:** Tinggi.
-
 ### A6. Info sistem/OS (kernel, build, patch keamanan, root check)
 
 - **Temuan:** AIDA64 (properti OS/Dalvik, deteksi root), Droid Hardware Info (kernel, governor, build), Device Info HW (build firmware lengkap, engineering menu MTK/Xiaomi), Test Your Android (root check + patch keamanan).
