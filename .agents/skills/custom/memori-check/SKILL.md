@@ -114,6 +114,8 @@ Koreksi/klarifikasi atas isi berkas sesi lama yang sudah `Sudah Sinkron` (buat b
 4. Isi Berkas Terdampak dan Sinkronisasi ke MEMORI.md; tandai sesi_18.md Sudah Sinkron pada akhir sesi
 ```
 
+## Contoh Salah
+
 ```markdown
 // DILARANG: mengedit berkas sesi yang sudah Sudah Sinkron untuk "mengoreksi" isinya
 // Salah: "catatan catch-up di sesi_15.md keliru, jadi sesi_15.md saya edit saja agar benar"
@@ -130,8 +132,6 @@ Koreksi/klarifikasi atas isi berkas sesi lama yang sudah `Sudah Sinkron` (buat b
 // DILARANG: pola hapus lalu buat ulang untuk membetulkan berkas sesi lama
 // Salah: "sesi_9.md isinya salah, saya hapus lalu buat lagi dengan konten yang benar"
 ```
-
-## Contoh Salah
 
 ```markdown
 // DILARANG: Memulai implementasi tanpa membaca MEMORI.md
