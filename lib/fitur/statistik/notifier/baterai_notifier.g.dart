@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'tema_provider.dart';
+part of 'baterai_notifier.dart';
 
 // **************************************************************************
 // RiverpodGenerator
@@ -9,43 +9,43 @@ part of 'tema_provider.dart';
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint, type=warning
 
-@ProviderFor(TemaNotifier)
-final temaProvider = TemaNotifierProvider._();
+@ProviderFor(BateraiNotifier)
+final bateraiProvider = BateraiNotifierProvider._();
 
-final class TemaNotifierProvider
-    extends $AsyncNotifierProvider<TemaNotifier, ThemeMode> {
-  TemaNotifierProvider._()
+final class BateraiNotifierProvider
+    extends $AsyncNotifierProvider<BateraiNotifier, BateraiInfo?> {
+  BateraiNotifierProvider._()
     : super(
         from: null,
         argument: null,
         retry: null,
-        name: r'temaProvider',
+        name: r'bateraiProvider',
         isAutoDispose: false,
         dependencies: null,
         $allTransitiveDependencies: null,
       );
 
   @override
-  String debugGetCreateSourceHash() => _$temaNotifierHash();
+  String debugGetCreateSourceHash() => _$bateraiNotifierHash();
 
   @$internal
   @override
-  TemaNotifier create() => TemaNotifier();
+  BateraiNotifier create() => BateraiNotifier();
 }
 
-String _$temaNotifierHash() => r'46f7778212eaf1d96268f331ac3934e4ff650204';
+String _$bateraiNotifierHash() => r'3ce320c3dfbfb334655572e323bac5f906a198cb';
 
-abstract class _$TemaNotifier extends $AsyncNotifier<ThemeMode> {
-  FutureOr<ThemeMode> build();
+abstract class _$BateraiNotifier extends $AsyncNotifier<BateraiInfo?> {
+  FutureOr<BateraiInfo?> build();
   @$mustCallSuper
   @override
   WhenComplete runBuild() {
-    final ref = this.ref as $Ref<AsyncValue<ThemeMode>, ThemeMode>;
+    final ref = this.ref as $Ref<AsyncValue<BateraiInfo?>, BateraiInfo?>;
     final element =
         ref.element
             as $ClassProviderElement<
-              AnyNotifier<AsyncValue<ThemeMode>, ThemeMode>,
-              AsyncValue<ThemeMode>,
+              AnyNotifier<AsyncValue<BateraiInfo?>, BateraiInfo?>,
+              AsyncValue<BateraiInfo?>,
               Object?,
               Object?
             >;

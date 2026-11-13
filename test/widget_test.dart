@@ -11,6 +11,25 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:spektra/app.dart';
+import 'package:spektra/fitur/statistik/model/baterai_info.dart';
+import 'package:spektra/fitur/statistik/notifier/baterai_notifier.dart';
+
+// Notification baterai palsu untuk lingkungan test (plugin tidak tersedia).
+class _BateraiNotifierPalsu extends BateraiNotifier {
+  @override
+  Future<BateraiInfo?> build() async {
+    return const BateraiInfo(
+      kapasitasTersisaMah: 4500,
+      levelPersen: 80,
+      statusPengisian: 'charging',
+      sumberCharger: 'USB',
+      kesehatan: 'health_good',
+      suhuCelcius: 30,
+      teganganMv: 3800,
+      teknologi: 'Li-ion',
+    );
+  }
+}
 
 void main() {
   setUp(() {
@@ -19,7 +38,14 @@ void main() {
 
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const ProviderScope(child: MyApp()));
+    // Plugin baterai tidak tersedia pada VM test; gunakan notifier palsu agar
+    // section statistik tidak menggantung pada panggilan platform channel.
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [bateraiProvider.overrideWith(_BateraiNotifierPalsu.new)],
+        child: const MyApp(),
+      ),
+    );
 
     // Tunggu pemuatan mode tema dari SharedPreferences selesai.
     await tester.pumpAndSettle();

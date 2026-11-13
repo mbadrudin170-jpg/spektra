@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-part 'tema_provider.g.dart';
+part 'tema_notifier.g.dart';
 
 // Mengelola mode tema aplikasi (terang, gelap, atau mengikuti sistem) dan
 // mempersistenkannya ke penyimpanan lokal.

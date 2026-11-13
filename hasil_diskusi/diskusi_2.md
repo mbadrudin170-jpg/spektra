@@ -1,7 +1,7 @@
 # Hasil Diskusi 2 — Menampilkan spesifikasi baterai perangkat pengguna
 
 ## Status
-- Dokumen: Draft
+- Dokumen: Final
 - Implementasi: Belum Diimplementasikan
 - Tanggal: 2026-11-13
 - Topik: Menampilkan spesifikasi baterai perangkat pengguna (kapasitas mAh, level, status pengisian, kesehatan, suhu, tegangan, tipe baterai) di aplikasi Flutter; topik bersumber dari `keluhan.md`
@@ -67,7 +67,7 @@ final int? capacityMah = info == null ? null : (info.batteryCapacity / 1000).rou
 - K-5: Package yang dipakai adalah **`battery_info_v2`** (`battery_info_v2: ^1.1.5`).
 - K-6: Data diperbarui dengan **manual refresh** (baca sekali saat layar dibuka + tombol muat ulang); bukan stream realtime.
 - K-7: Monitoring bersifat **snapshot kondisi saat ini**; tidak ada penyimpanan historis, tidak ada perubahan skema database.
-- K-8: Status dokumen `Draft` karena fitur belum diimplementasikan dan halaman statistik itu sendiri belum ada.
+- K-8: Status dokumen `Final` (diubah dari `Draft` pada 2026-11-14 atas persetujuan pengguna pada sesi tindak lanjut); fitur belum diimplementasikan dan halaman statistik itu sendiri belum ada.
 
 ## Rekomendasi
 - R-1: Bungkus pembacaan baterai dalam satu repository/helper (mis. `BatteryRepository`) yang mengembalikan model/DTO nullable-toleran; jangan memanggil plugin langsung dari widget, agar mudah di-mock di test dan mudah diganti bila `battery_info_v2` tidak terawat lagi.
@@ -107,3 +107,4 @@ final int? capacityMah = info == null ? null : (info.batteryCapacity / 1000).rou
 | Tanggal | Perubahan |
 |---------|-----------|
 | 2026-11-13 | Berkas dibuat dari diskusi mode diskusi; keputusan K-1 s.d. K-8; pertanyaan terbuka dicatat. |
+| 2026-11-14 | Status dokumen diubah `Draft` → `Final` atas persetujuan pengguna (sesi tindak lanjut); Implementasi tetap `Belum Diimplementasikan`. |

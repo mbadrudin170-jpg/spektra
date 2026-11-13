@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:spektra/fitur/pengaturan/screens/pengaturan_screen.dart';
+import 'package:spektra/fitur/statistik/screens/statistik_screen.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -93,6 +94,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           const _PlaceholderTab(label: 'Biodata'),
           const _PlaceholderTab(label: 'Impian'),
+          const StatistikScreen(),
           const PengaturanScreen(),
         ],
       ),
@@ -119,6 +121,10 @@ class _MyHomePageState extends State<MyHomePage> {
           NavigationDestination(
             icon: Icon(CupertinoIcons.star),
             label: 'Impian',
+          ),
+          NavigationDestination(
+            icon: Icon(CupertinoIcons.chart_bar_alt_fill),
+            label: 'Statistik',
           ),
           NavigationDestination(
             icon: Icon(CupertinoIcons.ellipsis),

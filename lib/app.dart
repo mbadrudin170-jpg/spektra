@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'package:spektra/fitur/pengaturan/tema/tema_provider.dart';
+import 'package:spektra/fitur/pengaturan/notifier/tema_notifier.dart';
 import 'package:spektra/home.dart';
 
 class MyApp extends ConsumerWidget {

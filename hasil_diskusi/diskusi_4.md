@@ -2,7 +2,7 @@
 
 ## Status
 - Dokumen: Final
-- Implementasi: Belum Diimplementasikan
+- Implementasi: Sudah Diimplementasikan
 - Tanggal: 2026-11-13
 - Topik: Perapihan dan penataan struktur folder `lib/` pada proyek spektra (rencana pemindahan konkret)
 
@@ -101,12 +101,12 @@ lib/
 ## Tindak Lanjut
 | No | Tindakan | File Terdampak | Status |
 |----|----------|----------------|--------|
-| 1 | Rename `lib/fitur/pengaturan/tema/tema_provider.dart` → `lib/fitur/pengaturan/notifier/tema_notifier.dart`; ubah `part` menjadi `part 'tema_notifier.g.dart';` | `lib/fitur/pengaturan/notifier/tema_notifier.dart` | belum |
-| 2 | Hapus `lib/fitur/pengaturan/tema/tema_provider.g.dart`; jalankan `dart run build_runner build --delete-conflicting-outputs` | `lib/fitur/pengaturan/notifier/tema_notifier.g.dart` | belum |
-| 3 | Perbarui impor di `lib/app.dart` ke `package:spektra/fitur/pengaturan/notifier/tema_notifier.dart` | `lib/app.dart` | belum |
-| 4 | Perbarui impor di `lib/fitur/pengaturan/screens/pengaturan_screen.dart` ke `package:spektra/fitur/pengaturan/notifier/tema_notifier.dart` | `lib/fitur/pengaturan/screens/pengaturan_screen.dart` | belum |
-| 5 | Hapus folder kosong `lib/fitur/pengaturan/tema/` | `lib/fitur/pengaturan/tema/` | belum |
-| 6 | Verifikasi `dart format`, `dart analyze`, `flutter test` | proyek | belum |
+| 1 | Rename `lib/fitur/pengaturan/tema/tema_provider.dart` → `lib/fitur/pengaturan/notifier/tema_notifier.dart`; ubah `part` menjadi `part 'tema_notifier.g.dart';` | `lib/fitur/pengaturan/notifier/tema_notifier.dart` | selesai |
+| 2 | Hapus `lib/fitur/pengaturan/tema/tema_provider.g.dart`; jalankan `dart run build_runner build --delete-conflicting-outputs` | `lib/fitur/pengaturan/notifier/tema_notifier.g.dart` | selesai |
+| 3 | Perbarui impor di `lib/app.dart` ke `package:spektra/fitur/pengaturan/notifier/tema_notifier.dart` | `lib/app.dart` | selesai |
+| 4 | Perbarui impor di `lib/fitur/pengaturan/screens/pengaturan_screen.dart` ke `package:spektra/fitur/pengaturan/notifier/tema_notifier.dart` | `lib/fitur/pengaturan/screens/pengaturan_screen.dart` | selesai |
+| 5 | Hapus folder kosong `lib/fitur/pengaturan/tema/` | `lib/fitur/pengaturan/tema/` | selesai |
+| 6 | Verifikasi `dart format`, `dart analyze`, `flutter test` | proyek | selesai |
 
 ## File Terdampak
 | Lokasi File | Status Perubahan | Deskripsi |
@@ -126,3 +126,4 @@ Belum ada
 | Tanggal | Perubahan |
 |---------|-----------|
 | 2026-11-13 | Berkas dibuat dari mode diskusi; blueprint target `lib/` dan keputusan K-1 s.d. K-9 disetujui pengguna |
+| 2026-11-14 | Implementasi selesai (sesi_21): `tema_provider.dart` → `notifier/tema_notifier.dart` (part → `tema_notifier.g.dart`), `tema_provider.g.dart` digenerate ulang via `build_runner`, impor `lib/app.dart` dan `pengaturan_screen.dart` diperbarui, folder `tema/` hilang, `dart format`/`dart analyze`/`flutter test` lulus; status Tindak Lanjut → `selesai`, Implementasi → `Sudah Diimplementasikan` |
