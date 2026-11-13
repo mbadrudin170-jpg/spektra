@@ -1,4 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Izin mikrofon untuk tes audio loopback (diminta saat tes dijalankan). -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <application
         android:label="spektra"
         android:name="${applicationName}"

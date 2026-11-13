@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'package:spektra/fitur/diagnostik/screens/diagnostik_screen.dart';
 import 'package:spektra/fitur/pengaturan/screens/pengaturan_screen.dart';
 import 'package:spektra/fitur/statistik/screens/statistik_screen.dart';
 
@@ -43,6 +44,12 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  void _bukaDiagnostik() {
+    Navigator.of(
+      context,
+    ).push(MaterialPageRoute<void>(builder: (_) => const DiagnostikScreen()));
+  }
+
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -83,11 +90,17 @@ class _MyHomePageState extends State<MyHomePage> {
               // Paint" action in the IDE, or press "p" in the console), to see
               // the wireframe for each widget.
               mainAxisAlignment: .center,
+              spacing: 16,
               children: [
                 const Text('You have pushed the button this many times:'),
                 Text(
                   '$_counter',
                   style: Theme.of(context).textTheme.headlineMedium,
+                ),
+                FilledButton.icon(
+                  onPressed: _bukaDiagnostik,
+                  icon: const Icon(Icons.health_and_safety_outlined),
+                  label: const Text('Tes Diagnostik'),
                 ),
               ],
             ),

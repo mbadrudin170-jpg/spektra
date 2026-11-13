@@ -35,8 +35,17 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
 
+  # Pemutar nada uji untuk tes audio speaker.
+  audioplayers: ^6.8.1
+
   # Informasi perangkat Android (RAM fisik/tersedia, ukuran disk).
   device_info_plus: ^13.3.0
+
+  # Direktori sementara untuk file rekaman tes loopback.
+  path_provider: ^2.1.6
+
+  # Perekam mikrofon untuk tes audio loopback.
+  record: ^7.2.0
 
   # Persistensi pengaturan lokal (mis. mode tema).
   shared_preferences: ^2.5.3
@@ -45,6 +54,9 @@ dependencies:
 
   # Membaca info baterai Android (kapasitas desain, level, status pengisian, dll.).
   battery_info_v2: ^1.1.5
+
+  # Flash/torch kamera sebagai senter.
+  torch_light: ^2.0.0
 
 dev_dependencies:
   flutter_test:
@@ -69,6 +81,10 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+
+  # Aset audio untuk tes speaker (nada uji sine 440 Hz).
+  assets:
+    - assets/audio/nada_uji.wav
 
   # To add assets to your application, add an assets section, like this:
   # assets:

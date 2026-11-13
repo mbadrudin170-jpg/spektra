@@ -52,10 +52,8 @@
 
 ### A3. Info CPU/SoC & GPU (frekuensi per core realtime, governor, arsitektur)
 
-- **Temuan:** CPU-Z (nama SoC, arsitektur, clock per core, governor), DevCheck, Droid Hardware Info (utilisasi realtime per core), Device Info HW (klaster, governor, ekstensi GPU) menjadikan ini layar wajib. Spektra belum memiliki apa pun di domain ini.
-- **Tujuan:** Fitur inti "Know Your Device"; nilai tinggi bagi pengguna yang ingin tahu SoC/performa perangkatnya.
-- **Referensi:** [CPU-Z](https://play.google.com/store/apps/details?id=com.cpuid.cpu_z), [DevCheck](https://play.google.com/store/apps/details?id=flar2.devcheck), [Droid Hardware Info](https://play.google.com/store/apps/details?id=com.inkwired.droidinfo), [Device Info HW](https://play.google.com/store/apps/details?id=ru.andr7e.deviceinfohw)
-- **Saran:** Halaman SoC: nama, vendor, arsitektur/ABI, jumlah core, klaster (big.LITTLE), frekuensi realtime per core, governor, proses manufaktur (bila terdeteksi); GPU: renderer, vendor, versi OpenGL ES/Vulkan. Gunakan angka realtime dengan `FontFeature.tabularFigures()`.
+<!-- PRD: prd_info_cpu_soc_gpu.md -->
+Sudah dibuatkan PRD-nya: `prd/prd_info_cpu_soc_gpu.md` (dibuat 2026-11-14). Isi section ini telah dipindahkan ke PRD tersebut; bagian ini hanya penanda.
 - **Prioritas:** Tinggi.
 
 ### A4. Tes diagnostik komponen interaktif (layar sentuh, dead pixel, audio, kamera, tombol, getar, senter)
