@@ -1,0 +1,25 @@
+{
+  "trailingComma": "none",
+  "overrides": [
+    {
+      "files": ["*.json"],
+      "options": {
+        "parser": "json",
+        "trailingComma": "none"
+      }
+    },
+    {
+      "files": [
+        "*.jsonc",
+        "tsconfig*.json",
+        "jsconfig.json",
+        "devcontainer.json",
+        "language-configuration.json"
+      ],
+      "options": {
+        "parser": "jsonc",
+        "trailingComma": "none"
+      }
+    }
+  ]
+}

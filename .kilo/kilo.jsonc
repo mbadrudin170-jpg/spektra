@@ -1,0 +1,178 @@
+{
+  "$schema": "https://app.kilo.ai/config.json",
+  "model": "kilo/kilo-auto/free",
+  "small_model": "kilo/kilo-auto/free",
+  "subagent_model": "kilo/kilo-auto/free",
+  "agent": {
+    "code": {
+      "model": "openrouter/thinkingmachines/inkling-2-small:free",
+      "prompt": "{file:./prompts/code.md}",
+      "variant": "max"
+    },
+    "ask": {
+      "model": "kilo/kilo-auto/free",
+      "variant": "max",
+      "prompt": "{file:./prompts/ask.md}"
+    },
+    "plan": {
+      "model": "kilo/kilo-auto/free"
+    },
+    "orchestrator": {
+      "model": "kilo/kilo-auto/free"
+    },
+    "debug": {
+      "model": "kilo/kilo-auto/free",
+      "prompt": "{file:./prompts/debug.md}"
+    },
+    "compaction": {
+      "model": "kilo/kilo-auto/free"
+    }
+  },
+
+  "permission": {
+    "bash": {
+      "*": "ask",
+      "git status *": "allow",
+      "git status": "allow",
+      "git diff *": "allow",
+      "git diff": "allow",
+      "git log *": "allow",
+      "git log": "allow",
+      "git show *": "allow",
+      "git branch *": "allow",
+      "git branch": "allow",
+      "git rev-parse *": "allow",
+      "git remote *": "allow",
+      "git blame *": "allow",
+      "ls *": "allow",
+      "ls": "allow",
+      "pwd": "allow",
+      "which *": "allow",
+      "find *": "allow",
+      "cat *": "deny",
+      "head *": "allow",
+      "tail *": "allow",
+      "rg *": "allow",
+      "grep *": "allow",
+      "echo *": "allow",
+      "flutter analyze *": "allow",
+      "flutter analyze": "allow",
+      "flutter test *": "allow",
+      "flutter test": "allow",
+      "dart format *": "allow",
+      "dart format": "allow",
+      "dart analyze *": "allow",
+      "dart fix *": "allow",
+      "flutter pub get *": "allow",
+      "flutter pub get": "allow",
+      "flutter pub add *": "allow",
+      "flutter pub remove *": "allow",
+      "wc *": "allow",
+      "sort *": "allow",
+      "sed *": "deny",
+      "webfetch *": "allow",
+      "cp *": "ask",
+      "python3 *": "deny",
+      "flutter *": "allow",
+      "dart *": "allow",
+      "timeout *": "allow",
+      "date *": "allow",
+      "mkdir *": "allow"
+    },
+    "external_directory": {
+      "/home/mbadrudin170/.pub-cache/*": "allow",
+      "/home/mbadrudin170/.config/kilo/*": "allow",
+      "/google/flutter/*": "allow",
+      "/home/mbadrudin170/.codeoss/extensions/kilocode.kilo-code-7.8.27-linux-x64/*": "allow",
+      "/home/mbadrudin170/share_global_saya/lib/src/utils/*": "allow",
+      "/home/mbadrudin170/share_global_saya/*": "allow"
+    },
+    "read": {
+      "*": "allow",
+      "*.env": "deny",
+      "*.env.*": "deny",
+      "*.env.example": "allow"
+    },
+    "kilo_memory_recall": {
+      "*": "allow"
+    }
+  },
+  "web_search": true,
+  "indexing": {
+    "enabled": true
+  },
+  "instructions": [
+    "AGENTS.md",
+    ".agents/rules/global/aturan_skill.md",
+    ".agents/rules/global/format_PRD.md",
+    ".agents/rules/global/format_hasil_diskusi.md",
+    ".agents/rules/global/format_task.md",
+    "SKILLS_INDEX.md"
+  ],
+  "auto_collapse_reasoning": true,
+  "terminal_command_display": "collapsed",
+  "experimental": {
+    "batch_tool": true,
+    "shared_agent_board": true,
+    "openTelemetry": false,
+    "continue_loop_on_deny": true,
+    "multi_project_agent_manager": true,
+    "codebase_search": false,
+    "mcp_timeout": 60000
+  },
+  "default_agent": "code",
+  "commit_message": {
+    "prompt": "Buat pesan commit Conventional Commits dari diff yang di-stage: `<type>(<scope>): <deskripsi>` (type: feat, fix, docs, style, refactor, test, chore, perf, build, ci). Deskripsi bahasa Indonesia baku, huruf kecil, imperatif, maks. 72 karakter, tanpa titik akhir. Isi sesuai diff; dilarang mengarang. Jawab hanya pesan commit, tanpa kata pengantar, backtick, atau kutip. Body opsional setelah satu baris kosong bila kompleks."
+  },
+  "compaction": {
+    "auto": true,
+    "prune": true
+  },
+  "watcher": {
+    "ignore": [
+      ".env",
+      ".git/**",
+      ".dart_tool/**",
+      "build/**",
+      "android/.gradle/**",
+      "ios/.symlinks/**",
+      "ios/Flutter/**",
+      "ios/Flutter/Generated.xcconfig",
+      "ios/Flutter/flutter_export_environment.sh",
+      "**/Pods/**",
+      "**/Podfile.lock",
+      "generated_plugin_registrant.dart",
+      "**/*.g.dart",
+      "**/*.freezed.dart",
+      ".idea/**",
+      ".vscode/**",
+      "*.iml",
+      "*.tmp",
+      "*.swp",
+      "*~",
+      "**/*.log",
+      "coverage/**",
+      "lcov.info",
+      "**/*.apk",
+      "**/*.aab",
+      "**/*.ipa",
+      ".fvm/**",
+      ".fvmrc"
+    ]
+  },
+  "reasoning_display": "headline",
+  "code_edit_display": "collapsed",
+  "mcp_tool_display": "collapsed",
+  "disabled_providers": [],
+  "provider": {},
+  "skills": {
+    "paths": [
+      ".agents/skills/custom",
+      ".agents/skills",
+      ".agents/skills/bawaan"
+    ]
+  },
+  "retention": {
+    "enabled": true
+  }
+}

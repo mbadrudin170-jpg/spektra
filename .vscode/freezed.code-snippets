@@ -1,0 +1,43 @@
+{
+  "Freezed Model (Supabase + Sqflite) Minimal": {
+    "prefix": "/freezed_model",
+    "scope": "dart",
+    "body": [
+      "import 'package:freezed_annotation/freezed_annotation.dart';",
+      "",
+      "part '${TM_FILENAME_BASE}.freezed.dart';",
+      "",
+      "@freezed",
+      "abstract class ${TM_FILENAME_BASE/(?:^|_)([a-z])/${1:/upcase}/g} with _$${TM_FILENAME_BASE/(?:^|_)([a-z])/${1:/upcase}/g} {",
+      "  const ${TM_FILENAME_BASE/(?:^|_)([a-z])/${1:/upcase}/g}._();",
+      "",
+      "  const factory ${TM_FILENAME_BASE/(?:^|_)([a-z])/${1:/upcase}/g}({",
+      "    required String id,",
+      "     ${1:// tambahkan field lain di sini}",
+      "  }) = _${TM_FILENAME_BASE/(?:^|_)([a-z])/${1:/upcase}/g};",
+      "",
+      "}"
+    ],
+    "description": "Freezed model with Supabase & Sqflite, using ParserUtil and NamaKolom constants"
+  },
+  "Freezed State (List Default)": {
+    "scope": "dart",
+    "prefix": "/freezed_state",
+    "body": [
+      "",
+      "import 'package:freezed_annotation/freezed_annotation.dart';",
+      "",
+      "part '${TM_FILENAME_BASE}.freezed.dart';",
+      "",
+      "@freezed",
+      "abstract class ${TM_FILENAME_BASE/(?:^|_)([a-z])/${1:/upcase}/g} with _$${TM_FILENAME_BASE/(?:^|_)([a-z])/${1:/upcase}/g} {",
+      "  const ${TM_FILENAME_BASE/(?:^|_)([a-z])/${1:/upcase}/g}._();",
+      "",
+      "  const factory ${TM_FILENAME_BASE/(?:^|_)([a-z])/${1:/upcase}/g}({",
+      "    @Default([]) List<${TM_FILENAME_BASE/^(.*?)_state$/${1:/capitalize}/g}Model> list${TM_FILENAME_BASE/^(.*?)_state$/${1:/capitalize}/g},",
+      "  }) = _${TM_FILENAME_BASE/(?:^|_)([a-z])/${1:/upcase}/g};",
+      "}"
+    ],
+    "description": "Membuat Freezed state dengan list default kosong, nama file sebagai  name"
+  }
+}

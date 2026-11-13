@@ -1,0 +1,158 @@
+{
+  "ConsumerWidget": {
+    "prefix": "/ConsumerWidget",
+    "scope": "dart",
+    "body": [
+      "import 'package:flutter/material.dart';",
+      "import 'package:flutter_riverpod/flutter_riverpod.dart';",
+      "",
+      "class $1 extends ConsumerWidget {",
+      "  const $1({super.key});",
+      "",
+      "  @override",
+      "  Widget build(BuildContext context, WidgetRef ref) {",
+      "    return Scaffold(",
+      "      appBar: AppBar(title: const Text('data')),",
+      "      body: Center(child: Text('$1')),",
+      "    );",
+      "  }",
+      "}"
+    ],
+    "description": "Buat ConsumerWidget baru",
+  },
+  "ConsumerStatefulWidget": {
+    "prefix": "/ConsumerStatefulWidget",
+    "body": [
+      "import 'package:flutter/material.dart';",
+      "import 'package:flutter_riverpod/flutter_riverpod.dart';",
+      "",
+      "class $1 extends ConsumerStatefulWidget {",
+      "  const $1({super.key});",
+      "",
+      "  @override",
+      "  ConsumerState<$1> createState() => _$1State();",
+      "}",
+      "",
+      "class _$1State extends ConsumerState<$1> {",
+      "  @override",
+      "  void initState() {",
+      "    super.initState();",
+      "    // TODO: implement initState",
+      "  }",
+      "  @override",
+      "  void dispose() {",
+      "    // TODO: implement dispose",
+      "    super.dispose();",
+      "  }",
+      "",
+      "  @override",
+      "  Widget build(BuildContext context) {",
+      "    return Scaffold(",
+      "      appBar: AppBar(title: const Text('data')),",
+      "      body: Center(child: Text('$1')),",
+      "    );",
+      "  }",
+      "",
+      "}"
+    ],
+    "description": "Buat ConsumerStatefulWidget baru",
+    "scope": "dart"
+  },
+  "final v = ref.watch(provider)": {
+    "prefix": "/RefWatchFinal",
+    "body": [
+      "final ${1:variableName} = ref.watch($2Provider);"
+    ],
+    "description": "Buat variabel final dan memantau provider",
+    "scope": "dart"
+  },
+  "final v = ref.watch(provider).value": {
+    "scope": "dart",
+    "prefix": "/refwatchValue",
+    "body": [
+      "final $1 = ref.watch($2Provider).value;$0"
+    ],
+    "description": "final ref watch value"
+  },
+  "final async=ref.watch(provider)": {
+    "scope": "dart",
+    "prefix": "/async value",
+    "body": [
+      "final $1Async=ref.watch($2Provider)"
+    ],
+    "description": ""
+  },
+  "AwaitRefReadNotifier": {
+    "scope": "dart",
+    "prefix": "/refreadNotifier",
+    "body": [
+      "final $1 =await ref.read($2Provider.notifier).$3;$0"
+    ],
+    "description": "AwaitRefReadNotifier"
+  },
+  "AwaitRefReadFuture": {
+    "scope": "dart",
+    "prefix": "/refReadFuture",
+    "body": [
+      "final $1 =await ref.read($2Provider.future);$0"
+    ],
+    "description": ""
+  },
+  "RefListen": {
+    "prefix": "/RefListen",
+    "body": [
+      "ref.listen(${1:provider}, (previous, next) {",
+      "\t$0",
+      "});"
+    ],
+    "description": "Mendengarkan provider",
+    "scope": "dart"
+  },
+  "Riverpod notifier class autoDispose": {
+    "prefix": "/riverpod_notifier",
+    "body": [
+      "import 'package:riverpod_annotation/riverpod_annotation.dart';",
+      "",
+      "part '${TM_FILENAME_BASE}.g.dart';",
+      "",
+      "@riverpod",
+      "class ${1:Nama} extends _$${1:Nama} {",
+      "  @override",
+      "  ${2:String} build() {",
+      "    return ${3:\"\"};",
+      "  }",
+      "}"
+    ],
+    "description": "Buat Notifier class dengan riverpod generator"
+  },
+  "Riverpod provider family keepAlive": {
+    "scope": "dart",
+    "prefix": "/riverpod_provider_family_keepalive",
+    "body": [
+      "import 'package:riverpod_annotation/riverpod_annotation.dart';",
+      "",
+      "part '${TM_FILENAME_BASE}.g.dart';",
+      "",
+      "@Riverpod(keepAlive: true)",
+      "${1:String} ${2:namaProvider}(Ref ref, ${3:String} ${4:parameter}) {",
+      "  return ${5:\"\"};",
+      "}"
+    ],
+    "description": "Buat provider family keepAlive dengan riverpod generator"
+  },
+  "Riverpod provider family autodispose": {
+    "scope": "dart",
+    "prefix": "/riverpod_provider_family_autodispose",
+    "body": [
+      "import 'package:riverpod_annotation/riverpod_annotation.dart';",
+      "",
+      "part '${TM_FILENAME_BASE}.g.dart';",
+      "",
+      "@riverpod",
+      "${1:String} ${2:namaProvider}(Ref ref, ${3:String} ${4:parameter}) {",
+      "  return ${5:\"\"};",
+      "}"
+    ],
+    "description": "Buat provider family autoDispose (default) dengan riverpod generator"
+  },
+}

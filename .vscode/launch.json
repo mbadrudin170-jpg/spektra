@@ -1,0 +1,66 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    // {
+    //   "name": "myapp (release mode - Cloud Shell)",
+    //   "request": "launch",
+    //   "type": "dart",
+    //   "program": "lib/main.dart",
+    //   "deviceId": "web-server",
+    //   "flutterMode": "release",
+    //   "args": ["--web-hostname", "0.0.0.0", "--web-port", "8080"],
+    //   "env": {
+    //     "FLUTTER_WEB_RENDERER": "html"
+    //   }
+    // },
+    {
+      "name": "myapp (debug mode - Local only)",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "deviceId": "web-server",
+      "args": [
+        "--web-hostname=0.0.0.0",
+        "--web-port=8080",
+        "--web-server-debug-protocol=sse",
+        "--web-server-debug-backend-protocol=sse",
+        "--web-server-debug-injected-client-protocol=sse"
+      ]
+    } // {
+    //     "name": "myapp (profile mode)",
+    //     "request": "launch",
+    //     "type": "dart",
+    //     "program": "lib/main.dart",
+    //     "deviceId": "web-server",
+    //     "flutterMode": "profile",
+    //     "args": [
+    //         "--web-hostname",
+    //         "0.0.0.0",
+    //         "--web-port",
+    //         "8080"
+    //     ],
+    //     "env": {
+    //         "FLUTTER_WEB_RENDERER": "html"
+    //     }
+    // },
+    // {
+    //     "name": "myapp",
+    //     "request": "launch",
+    //     "type": "dart",
+    //     "program": "lib/main.dart",
+    //     "deviceId": "web-server",
+    //     "args": [
+    //         "--web-hostname",
+    //         "127.0.0.1",
+    //         "--web-port",
+    //         "8080"
+    //     ],
+    //     "toolArgs": [
+    //         "--no-devtools"
+    //     ],
+    //     "env": {
+    //         "FLUTTER_WEB_RENDERER": "html"
+    //     }
+    // },
+  ]
+}

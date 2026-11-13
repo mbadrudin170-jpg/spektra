@@ -1,0 +1,141 @@
+{
+  "version": 2,
+  "installations": {
+    "generic": {
+      "package:adaptive_dialog": {
+        "skills": [
+          {
+            "name": "adaptive_dialog-dialogs",
+            "installedAt": "2026-11-12T13:37:01.059303Z",
+            "contentHash": "9zsp/CYhAnz9O8l0kS7DmQ==",
+            "path": "skills/adaptive_dialog-dialogs"
+          }
+        ]
+      },
+      "package:restart_app": {
+        "skills": [
+          {
+            "name": "restart-app-integration",
+            "installedAt": "2026-11-12T13:37:01.061551Z",
+            "contentHash": "nOhgizji/GQ5M+NxH+v+Vg==",
+            "path": "skills/restart-app-integration"
+          },
+          {
+            "name": "restart-app-ios-engine-restart",
+            "installedAt": "2026-11-12T13:37:01.065145Z",
+            "contentHash": "ul374MQWumgFeswL5TKMqQ==",
+            "path": "skills/restart-app-ios-engine-restart"
+          }
+        ]
+      },
+      "package:sqflite": {
+        "skills": [
+          {
+            "name": "sqflite-testing-and-platforms",
+            "installedAt": "2026-11-12T13:37:01.067572Z",
+            "contentHash": "3tyVO/yHbhJmT4nYerW4tQ==",
+            "path": "skills/sqflite-testing-and-platforms"
+          },
+          {
+            "name": "sqflite-open-database",
+            "installedAt": "2026-11-12T13:37:01.069650Z",
+            "contentHash": "fOmoB+4dNOjQDdvPkJjRXw==",
+            "path": "skills/sqflite-open-database"
+          },
+          {
+            "name": "sqflite-crud-and-transactions",
+            "installedAt": "2026-11-12T13:37:01.075850Z",
+            "contentHash": "lEO7nhZOzQbXLY8dWXXHNw==",
+            "path": "skills/sqflite-crud-and-transactions"
+          }
+        ]
+      },
+      "package:sqflite_common_ffi_web": {
+        "skills": [
+          {
+            "name": "sqflite-common-ffi-web-options",
+            "installedAt": "2026-11-12T13:37:01.079590Z",
+            "contentHash": "sbLsdetrQZu0rzLeGFb9nQ==",
+            "path": "skills/sqflite-common-ffi-web-options"
+          },
+          {
+            "name": "sqflite-common-ffi-web-setup",
+            "installedAt": "2026-11-12T13:37:01.082977Z",
+            "contentHash": "yVnI5Sk64s9GLC3YJWHVXw==",
+            "path": "skills/sqflite-common-ffi-web-setup"
+          }
+        ]
+      }
+    },
+    "cline": {
+      "package:adaptive_dialog": {
+        "skills": [
+          {
+            "name": "adaptive_dialog-dialogs",
+            "installedAt": "2026-11-12T13:37:01.087637Z",
+            "contentHash": "9zsp/CYhAnz9O8l0kS7DmQ==",
+            "path": "skills/adaptive_dialog-dialogs"
+          }
+        ]
+      },
+      "package:restart_app": {
+        "skills": [
+          {
+            "name": "restart-app-integration",
+            "installedAt": "2026-11-12T13:37:01.090876Z",
+            "contentHash": "nOhgizji/GQ5M+NxH+v+Vg==",
+            "path": "skills/restart-app-integration"
+          },
+          {
+            "name": "restart-app-ios-engine-restart",
+            "installedAt": "2026-11-12T13:37:01.096373Z",
+            "contentHash": "ul374MQWumgFeswL5TKMqQ==",
+            "path": "skills/restart-app-ios-engine-restart"
+          }
+        ]
+      },
+      "package:sqflite": {
+        "skills": [
+          {
+            "name": "sqflite-testing-and-platforms",
+            "installedAt": "2026-11-12T13:37:01.099845Z",
+            "contentHash": "3tyVO/yHbhJmT4nYerW4tQ==",
+            "path": "skills/sqflite-testing-and-platforms"
+          },
+          {
+            "name": "sqflite-open-database",
+            "installedAt": "2026-11-12T13:37:01.103104Z",
+            "contentHash": "fOmoB+4dNOjQDdvPkJjRXw==",
+            "path": "skills/sqflite-open-database"
+          },
+          {
+            "name": "sqflite-crud-and-transactions",
+            "installedAt": "2026-11-12T13:37:01.109660Z",
+            "contentHash": "lEO7nhZOzQbXLY8dWXXHNw==",
+            "path": "skills/sqflite-crud-and-transactions"
+          }
+        ]
+      },
+      "package:sqflite_common_ffi_web": {
+        "skills": [
+          {
+            "name": "sqflite-common-ffi-web-options",
+            "installedAt": "2026-11-12T13:37:01.112027Z",
+            "contentHash": "sbLsdetrQZu0rzLeGFb9nQ==",
+            "path": "skills/sqflite-common-ffi-web-options"
+          },
+          {
+            "name": "sqflite-common-ffi-web-setup",
+            "installedAt": "2026-11-12T13:37:01.114202Z",
+            "contentHash": "yVnI5Sk64s9GLC3YJWHVXw==",
+            "path": "skills/sqflite-common-ffi-web-setup"
+          }
+        ]
+      }
+    }
+  },
+  "suggestedRepos": [
+    "https://github.com/dart-lang/skills.git",
+    "https://github.com/flutter/agent-plugins.git"
+  ]
+}

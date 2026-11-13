@@ -1,0 +1,10 @@
+{
+  "komentar belum paham": {
+    "scope": "dart",
+    "prefix": "/komentar belum paham",
+    "body": [
+      "// TODO : tolong tambahkan komentar untuk kode di bawah ini karena saya belum paham fungsinya untuk apa",
+    ],
+    "description": "komentar untuk memerintahkan ai agar menulis komentar untuk kode yang belum di pahami",
+  },
+}

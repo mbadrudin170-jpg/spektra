@@ -1,0 +1,54 @@
+{
+	"initState method": {
+		"scope": "dart",
+		"prefix": "/initstate",
+		"body": [
+			"@override",
+			"void initState() {",
+			"  super.initState();",
+			"  ${1:// TODO: inisialisasi}",
+			"}"
+		],
+		"description": "Metode initState Flutter"
+	},
+	"dispose method": {
+		"scope": "dart",
+		"prefix": "/dispose",
+		"body": [
+			"@override",
+			"void dispose() {",
+			"  ${1:// TODO: dispose resources}",
+			"  super.dispose();",
+			"}"
+		],
+		"description": "Metode dispose Flutter"
+	},
+	"ambil satu item by id": {
+		"scope": "dart",
+		"prefix": "/method_ambilSatuItem",
+		"body": [
+			"${1:ModelType}? getById(String id) {",
+			"  return list${2:Model}.firstWhereOrNull((item) => item.id == id);",
+			"}"
+		],
+		"description": "Method untuk mengambil satu item berdasarkan id menggunakan package collection"
+	},
+	"urutkanListAsc": {
+		"scope": "dart",
+		"prefix": "/method_urutkanListAsc",
+		"body": [
+			"List<${2:Model}> ${1:listHasil} = [...${3:listSumber}]..sort((a, b) => a.${4:properti}.compareTo(b.${4:properti}));$0"
+		],
+		"description": "Sorting ascending menggunakan properti"
+	},
+	"getListById": {
+		"scope": "dart",
+		"prefix": "/dart_getListById",
+		"body": [
+			"List<${1:Model}> ${2:getListById}(${3:String} ${4:id}) {",
+			"  return ${5:listSumber}.where((${6:item}) => ${6:item}.${7:propertiId} == ${4:id}).toList();",
+			"}"
+		],
+		"description": "Fungsi mengambil list berdasarkan ID"
+	}
+}

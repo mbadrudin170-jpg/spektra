@@ -1,0 +1,10 @@
+{
+  "Dokumentasi path model": {
+    "prefix": "/path",
+    "body": [
+      "// ${TM_FILEPATH/^.*?service\\///}",
+      "$1"
+    ],
+    "description": "Menulis komentar path file"
+  }
+}

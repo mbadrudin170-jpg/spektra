@@ -1,0 +1,224 @@
+{
+  "saringList": {
+    "scope": "dart",
+    "prefix": "/dart_saringList",
+    "body": [
+      "List<${4:Model}> ${1:listHasil} = ${2:listSumber}",
+      "  .where((m) => !${3:listPembanding}.any((d) => d.${5:propertiId} == m.${5:propertiId}))",
+      "  .toList();$0"
+    ],
+    "description": "Filter: ambil item dari listSumber yang tidak ada di listPembanding"
+  },
+  "urutkanListDesc": {
+    "scope": "dart",
+    "prefix": "/dart_urutkanListDesc",
+    "body": [
+      "List<${2:Model}> ${1:listHasil} = [...${3:listSumber}]..sort((a, b) => b.${4:properti}.compareTo(a.${4:properti}));$0"
+    ],
+    "description": "Sorting descending menggunakan properti"
+  },
+  "variabel ambilSatuItem": {
+    "scope": "dart",
+    "prefix": "/variabel_ambilSatuItem",
+    "body": [
+      "final ${4:item} = ${1:listSumber}.firstWhereOrNull((item) => item.${3:propertiId} == ${2:idValue});$0"
+    ],
+    "description": "Mengambil satu item berdasarkan ID menggunakan package collection, menghasilkan null jika tidak ditemukan"
+  },
+  "filterList": {
+    "scope": "dart",
+    "prefix": "/dart_filterList",
+    "body": [
+      "final ${1:listHasil} = ${2:listSumber}",
+      "    .where((item) => ${3:kondisi})",
+      "    .toList();$0"
+    ],
+    "description": "Filter list berdasarkan kondisi"
+  },
+  "mapList": {
+    "scope": "dart",
+    "prefix": "/dart_mapList",
+    "body": [
+      "final ${1:listHasil} = ${2:listSumber}",
+      "    .map((item) => ${3:item.properti})",
+      "    .toList();$0"
+    ],
+    "description": "Mengubah setiap item dalam list menggunakan map"
+  },
+  "mapListModel": {
+    "scope": "dart",
+    "prefix": "/dart_mapListModel",
+    "body": [
+      "List<${1:ModelHasil}> ${2:listHasil} = ${3:listSumber}",
+      "    .map((item) => ${4:ModelHasil}(/* data */))",
+      "    .toList();$0"
+    ],
+    "description": "Mengubah list menjadi list model lain"
+  },
+  "anyList": {
+    "scope": "dart",
+    "prefix": "/dart_anyList",
+    "body": [
+      "final ${1:ada} = ${2:listSumber}.any((item) => ${3:kondisi});$0"
+    ],
+    "description": "Mengecek apakah minimal satu item memenuhi kondisi"
+  },
+  "everyList": {
+    "scope": "dart",
+    "prefix": "/dart_everyList",
+    "body": [
+      "final ${1:semua} = ${2:listSumber}.every((item) => ${3:kondisi});$0"
+    ],
+    "description": "Mengecek apakah semua item memenuhi kondisi"
+  },
+  "containsList": {
+    "scope": "dart",
+    "prefix": "/dart_containsList",
+    "body": [
+      "final ${1:ada} = ${2:listSumber}.contains(${3:nilai});$0"
+    ],
+    "description": "Mengecek apakah list mengandung nilai tertentu"
+  },
+  "isEmptyList": {
+    "scope": "dart",
+    "prefix": "/dart_isEmptyList",
+    "body": [
+      "if (${1:listSumber}.isEmpty) {",
+      "  ${2:}",
+      "}$0"
+    ],
+    "description": "Mengecek apakah list kosong"
+  },
+  "isNotEmptyList": {
+    "scope": "dart",
+    "prefix": "/dart_isNotEmptyList",
+    "body": [
+      "if (${1:listSumber}.isNotEmpty) {",
+      "  ${2:}",
+      "}$0"
+    ],
+    "description": "Mengecek apakah list tidak kosong"
+  },
+  "firstList": {
+    "scope": "dart",
+    "prefix": "/dart_firstList",
+    "body": [
+      "final ${1:item} = ${2:listSumber}.first;$0"
+    ],
+    "description": "Mengambil item pertama dari list"
+  },
+  "lastList": {
+    "scope": "dart",
+    "prefix": "/dart_lastList",
+    "body": [
+      "final ${1:item} = ${2:listSumber}.last;$0"
+    ],
+    "description": "Mengambil item terakhir dari list"
+  },
+  "takeList": {
+    "scope": "dart",
+    "prefix": "/dart_takeList",
+    "body": [
+      "final ${1:listHasil} = ${2:listSumber}.take(${3:5}).toList();$0"
+    ],
+    "description": "Mengambil sejumlah item pertama dari list"
+  },
+  "skipList": {
+    "scope": "dart",
+    "prefix": "/dart_skipList",
+    "body": [
+      "final ${1:listHasil} = ${2:listSumber}.skip(${3:5}).toList();$0"
+    ],
+    "description": "Melewati sejumlah item pertama dari list"
+  },
+  "reverseList": {
+    "scope": "dart",
+    "prefix": "/dart_reverseList",
+    "body": [
+      "final ${1:listHasil} = ${2:listSumber}.reversed.toList();$0"
+    ],
+    "description": "Membalik urutan list"
+  },
+  "copyList": {
+    "scope": "dart",
+    "prefix": "/dart_copyList",
+    "body": [
+      "final ${1:listHasil} = [...${2:listSumber}];$0"
+    ],
+    "description": "Membuat salinan list baru"
+  },
+  "addList": {
+    "scope": "dart",
+    "prefix": "/dart_addList",
+    "body": [
+      "${1:list}.add(${2:item});$0"
+    ],
+    "description": "Menambahkan satu item ke list"
+  },
+  "addAllList": {
+    "scope": "dart",
+    "prefix": "/dart_addAllList",
+    "body": [
+      "${1:list}.addAll(${2:listTambahan});$0"
+    ],
+    "description": "Menambahkan banyak item ke list"
+  },
+  "removeList": {
+    "scope": "dart",
+    "prefix": "/dart_removeList",
+    "body": [
+      "${1:list}.remove(${2:item});$0"
+    ],
+    "description": "Menghapus item dari list"
+  },
+  "removeWhereList": {
+    "scope": "dart",
+    "prefix": "/dart_removeWhereList",
+    "body": [
+      "${1:list}.removeWhere((item) => ${2:kondisi});$0"
+    ],
+    "description": "Menghapus semua item yang memenuhi kondisi"
+  },
+  "clearList": {
+    "scope": "dart",
+    "prefix": "/dart_clearList",
+    "body": [
+      "${1:list}.clear();$0"
+    ],
+    "description": "Mengosongkan list"
+  },
+  "sortListCustom": {
+    "scope": "dart",
+    "prefix": "/variabel_sortListCustom",
+    "body": [
+      "final ${1:listHasil} = [...${2:listSumber}]",
+      "  ..sort((a, b) {",
+      "    return ${3:a.properti.compareTo(b.properti)};",
+      "  });$0"
+    ],
+    "description": "Sorting list dengan comparator custom"
+  },
+  "groupListBy": {
+    "scope": "dart",
+    "prefix": "/dart_groupListBy",
+    "body": [
+      "final Map<${1:String}, List<${2:Model}>> ${3:hasil} = {};",
+      "",
+      "for (final item in ${4:listSumber}) {",
+      "  final key = item.${5:properti};",
+      "  ${3:hasil}.putIfAbsent(key, () => []).add(item);",
+      "}$0"
+    ],
+    "description": "Mengelompokkan item berdasarkan properti"
+  },
+  "forFinal": {
+    "scope": "dart",
+    "prefix": "/dart_forFinal",
+    "body": [
+      "for (final ${1:item} in ${2:listSumber}) {",
+      "  ${3:}",
+      "}$0"
+    ],
+    "description": "Perulangan for final untuk setiap item dalam list"
+  }
+}

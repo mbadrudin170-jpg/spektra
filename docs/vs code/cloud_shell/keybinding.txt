@@ -1,0 +1,113 @@
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "key": "meta+e",
+    "command": "editor.unfoldAll",
+    "when": "editorTextFocus && foldingEnabled",
+  },
+  {
+    "key": "meta+w",
+    "command": "editor.foldLevel2",
+    "when": "editorTextFocus && foldingEnabled",
+  },
+  {
+    "key": "meta+`",
+    "command": "kilo-code.new.addToContext",
+    "when": "editorHasSelection && editorTextFocus",
+  },
+  {
+    "key": "meta+2",
+    "command": "editor.action.rename",
+    "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly",
+  },
+  {
+    "key": "meta+2",
+    "command": "agentSession.rename",
+    "when": "agentSessionsViewerFocused && !agentSessionHasMultipleSelected && chatSessionType == 'local'",
+  },
+  {
+    "key": "meta+2",
+    "command": "renameFile",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus",
+  },
+  {
+    "key": "meta+2",
+    "command": "workbench.action.terminal.renameActiveTab",
+    "when": "terminalHasBeenCreated && terminalTabsFocus && terminalTabsSingularSelection || terminalProcessSupported && terminalTabsFocus && terminalTabsSingularSelection",
+  },
+  {
+    "key": "meta+2",
+    "command": "debug.renameWatchExpression",
+    "when": "watchExpressionsFocused",
+  },
+  {
+    "key": "meta+tab",
+    "command": "geminicodeassist.terminal.addSelectionToChatContext",
+    "when": "terminalTextSelectedInFocused",
+  },
+  {
+    "key": "meta+tab",
+    "command": "geminicodeassist.editor.addSelectionToChatContext",
+    "when": "!terminalTextSelectedInFocused",
+  },
+  {
+    "key": "meta+c",
+    "command": "copyRelativeFilePath",
+    "when": "!editorFocus",
+  },
+  {
+    "key": "meta+c",
+    "command": "copyRelativeFilePath",
+    "when": "editorFocus",
+  },
+  {
+    "key": "meta+k",
+    "command": "workbench.action.pinEditor",
+    "when": "!activeEditorIsPinned",
+  },
+  {
+    "key": "meta+k",
+    "command": "workbench.action.unpinEditor",
+    "when": "activeEditorIsPinned",
+  },
+  {
+    "key": "meta+5",
+    "command": "workbench.action.debug.continue",
+    "when": "debugState == 'stopped'",
+  },
+  {
+    "key": "f5",
+    "command": "-workbench.action.debug.continue",
+    "when": "debugState == 'stopped'",
+  },
+  {
+    "key": "meta+5",
+    "command": "workbench.action.debug.start",
+    "when": "debuggersAvailable && debugState == 'inactive'",
+  },
+  {
+    "key": "f5",
+    "command": "-workbench.action.debug.start",
+    "when": "debuggersAvailable && debugState == 'inactive'",
+  },
+  {
+    "key": "meta+5",
+    "command": "debug.openView",
+    "when": "!debuggersAvailable",
+  },
+  {
+    "key": "f5",
+    "command": "-debug.openView",
+    "when": "!debuggersAvailable",
+  },
+  {
+    "key": "meta+6",
+    "command": "workbench.action.debug.stop",
+    "when": "inDebugMode && !focusedSessionIsAttach",
+  },
+  {
+    "key": "shift+f5",
+    "command": "-workbench.action.debug.stop",
+    "when": "inDebugMode && !focusedSessionIsAttach",
+  },
+]

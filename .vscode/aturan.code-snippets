@@ -1,0 +1,40 @@
+{
+	"Snippet baru": {
+		"scope": "json,jsonc,snippets",
+		"prefix": "/snippet_baru",
+		"body": [
+			"\"$1\": {",
+			"    \"scope\": \"${2|dart,markdown|}\",",
+			"    \"prefix\": \"$3\",",
+			"    \"body\": [",
+			"        \"$4\"",
+			"    ],",
+			"    \"description\": \"$5\"",
+			"},"
+		],
+		"description": "Membuat template snippet baru (pilih scope: dart/markdown)"
+	},
+	"Aturan Komentar": {
+		"scope": "markdown",
+		"prefix": "/aturan_komentar",
+		"body": [
+			"Tolong bantu saya perbaiki komentar di file $1 tugas nya  hapus komentar tidak penting dan perbaiki komentar yang penting agar jangan terlalu bertele tele jadi komentar itu cukup singkat, padat jelas dan mudah di pahami, dan ingat jangan ubah kode yang ada "
+		],
+	},
+	"Aturan Log Debug ": {
+		"scope": "markdown",
+		"prefix": "/aturan_log_debug",
+		"body": [
+			"aturan penggunaan log  debug, Tolong tambahkan log debug di setiap titik pada file $1 log debug nya harus lengkap, makdusnya lengkap disini adalah agar setiap parameter di kasih log debug nya dan panggil parameter itu ke log debug agar saya mudah mengetahui output nya per paramter. dan juga setiap log debug jangan terlalu panjang dan bertele tele cukup simpel dan jelas saja."
+		],
+		"description": ""
+	},
+	"Aturan percantik ui": {
+		"scope": "markdown",
+		"prefix": "/percantik ui",
+		"body": [
+			"tolong percantik ui untuk file $1 tapi jangan pernah ubah logika yang sudah ada"
+		],
+		"description": "untuk prompt memeprcantik ui suatu halaman"
+	},
+}

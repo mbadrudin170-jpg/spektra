@@ -1,0 +1,18 @@
+{
+	"TODO singkat": {
+		"scope": "dart",
+		"prefix": "/todo_singkat",
+		"body": [
+			"// TODO : ${1:cek sebelum listing}"
+		],
+		"description": ""
+	},
+		"TODO komentar": {
+			"scope": "dart",
+			"prefix": "/todo_komentar",
+			"body": [
+				"// TODO : tambah komentar untuk kode dibawah ini"
+			],
+			"description": ""
+		},
+}

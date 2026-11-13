@@ -1,0 +1,412 @@
+{
+  "IconButton": {
+    "prefix": "/iconbutton",
+    "body": [
+      "IconButton(",
+      "  icon: const Icon(Icons.$1),",
+      "  onPressed: () {",
+      "    // TODO: ${2:Implement action}",
+      "  },",
+      ")",
+      "$0"
+    ],
+    "description": "Membuat IconButton hapus pada Flutter"
+  },
+  "IconButton Hapus": {
+    "prefix": "/iconbutton-hapus",
+    "body": [
+      "IconButton(",
+      "  icon: const Icon(Icons.delete),",
+      "  onPressed: () {",
+      "    // TODO: ${2:Implement delete action}",
+      "  },",
+      ")",
+      "$0"
+    ],
+    "description": "Membuat IconButton hapus pada Flutter"
+  },
+  "IconButton Edit": {
+    "prefix": "/iconbutton-edit",
+    "body": [
+      "IconButton(",
+      "  icon: const Icon(Icons.edit),",
+      "  onPressed: () {",
+      "    // TODO: ${2:Implement edit action}",
+      "  },",
+      ")",
+      "$0"
+    ],
+    "description": "Membuat IconButton edit pada Flutter"
+  },
+  "ListView.builder": {
+    "scope": "dart",
+    "prefix": "/listviewbuilder",
+    "body": [
+      "ListView.builder(",
+      "  itemCount: ${1:items}.length,",
+      "  itemBuilder: (context, index) {",
+      "    final item = ${1:items}[index];",
+      "    return ${2:Text('item')};",
+      "  },",
+      ")",
+      "$0"
+    ],
+    "description": "Flutter ListView.builder with item variable"
+  },
+  "ListView.separated": {
+    "scope": "dart",
+    "prefix": "/listviewseparated",
+    "body": [
+      "ListView.separated(",
+      "  itemCount: ${1:items}.length,",
+      "  itemBuilder: (context, index) {",
+      "    final item = ${1:items}[index];",
+      "    return ${2:YourItemWidget(item)};",
+      "  },",
+      "  separatorBuilder: (context, index) {",
+      "    return ${3:Divider()};",
+      "  },",
+      ")",
+      "$0"
+    ],
+    "description": "Flutter ListView.separated with item variable and separator"
+  },
+  "ElevatedButton Dasar": {
+    "scope": "dart",
+    "prefix": "/elevatedbutton",
+    "body": [
+      "ElevatedButton(",
+      "  onPressed: () {$1},",
+      "  child: const Text('${2:Tombol}'),",
+      ")$0"
+    ],
+    "description": "ElevatedButton dasar dengan onPressed dan child"
+  },
+  "ElevatedButton dengan Icon": {
+    "scope": "dart",
+    "prefix": "/ElevatedButton.icon",
+    "body": [
+      "ElevatedButton.icon(",
+      "  onPressed: () {$1},",
+      "  icon: const Icon(Icons.${2:add}),",
+      "  label: const Text('${3:Tombol}'),",
+      ")$0"
+    ],
+    "description": "ElevatedButton dengan icon di sebelah kiri"
+  },
+  "ElevatedButton Tombol Hapus (Merah)": {
+    "scope": "dart",
+    "prefix": "/buttondelete",
+    "body": [
+      "ElevatedButton(",
+      "  onPressed: ${1:() {}},",
+      "  style: ElevatedButton.styleFrom(",
+      "    backgroundColor: Theme.of(context).colorScheme.error,",
+      "    foregroundColor: Colors.white,",
+      "  ),",
+      "  child: const Text('${2:Hapus}'),",
+      ")$0"
+    ],
+    "description": "ElevatedButton untuk aksi hapus (warna merah dari theme)"
+  },
+  "ElevatedButton dengan OutlinedButton (Pasangan)": {
+    "scope": "dart",
+    "prefix": "/buttonpair",
+    "body": [
+      "Row(",
+      "  children: [",
+      "    Expanded(",
+      "      child: OutlinedButton(",
+      "        onPressed: ${1:() => Navigator.pop(context)},",
+      "        child: const Text('${2:Batal}'),",
+      "      ),",
+      "    ),",
+      "    const SizedBox(width: 12),",
+      "    Expanded(",
+      "      child: ElevatedButton(",
+      "        onPressed: ${3:() {}},",
+      "        child: const Text('${4:Simpan}'),",
+      "      ),",
+      "    ),",
+      "  ],",
+      "  $0"
+    ],
+    "description": "Pasangan OutlinedButton + ElevatedButton (Batal & Simpan)"
+  },
+  "widget ": {
+    "scope": "dart",
+    "prefix": "/widget",
+    "body": [
+      "Widget _build$1 (){return $2}$0"
+    ],
+    "description": "widget untuk class tersebut"
+  },
+  "FloatingActionButton": {
+    "scope": "dart",
+    "prefix": "/FloatingActionButton",
+    "body": [
+      "FloatingActionButton(",
+      "  onPressed: ${1:() {}}, ",
+      "  child: const Icon(${2:Icons.add}),",
+      ")$0"
+    ],
+    "description": "Floating Action Button with icon"
+  },
+  "Text ": {
+    "scope": "dart",
+    "prefix": "/text",
+    "body": [
+      "Text('$1')$0"
+    ],
+    "description": "Widget Text flutter"
+  },
+  "Icons": {
+    "scope": "dart",
+    "prefix": "/Icons",
+    "body": [
+      "Icon(Icons.$1)$0"
+    ],
+    "description": "Widget Icon Flutter"
+  },
+  "CupertinoIcons": {
+    "scope": "dart",
+    "prefix": "/icon.cupertinoIcons",
+    "body": [
+      "Icon(CupertinoIcons.$1)$0"
+    ],
+    "description": ""
+  },
+  "Column": {
+    "scope": "dart",
+    "prefix": "/column",
+    "body": [
+      "Column(children:[$1]),$0"
+    ],
+    "description": "Widget Column flutter"
+  },
+  "Row": {
+    "scope": "dart",
+    "prefix": "/row",
+    "body": [
+      "Row(",
+      "  children: [",
+      "    ${1:child},",
+      "  ],",
+      "),$0"
+    ],
+    "description": "Widget Row Flutter dengan children"
+  },
+  "SizedBox (Height & Width)": {
+    "scope": "dart",
+    "prefix": "/sizedbox",
+    "body": [
+      "const SizedBox(",
+      "  width: ${1:double.infinity},",
+      "  height: ${2:100},",
+      "  child: ${3:child},",
+      "),$0"
+    ],
+    "description": "SizedBox dengan width, height, dan child"
+  },
+  "SizedBox Height": {
+    "scope": "dart",
+    "prefix": "/sizedbox.height",
+    "body": [
+      "const SizedBox(height: ${1:10})$0"
+    ],
+    "description": "SizedBox hanya untuk tinggi (spacer vertikal)"
+  },
+  "SizedBox Width": {
+    "scope": "dart",
+    "prefix": "/sizedbox.width",
+    "body": [
+      "const SizedBox(width: ${1:10}),$0"
+    ],
+    "description": "SizedBox hanya untuk lebar (spacer horizontal)"
+  },
+  "SizedBox Expand": {
+    "scope": "dart",
+    "prefix": "/sizedbox.expand",
+    "body": [
+      "const SizedBox.expand(",
+      "  child: ${1:child},",
+      ")$0"
+    ],
+    "description": "SizedBox.expand untuk mengisi seluruh ruang"
+  },
+  "SizedBox Shrink": {
+    "scope": "dart",
+    "prefix": "/sizedboxshrink",
+    "body": [
+      "const SizedBox.shrink()$0"
+    ],
+    "description": "SizedBox.shrink untuk widget kosong (ukuran 0x0)"
+  },
+  "Scaffold": {
+    "scope": "dart",
+    "prefix": "/scaffold",
+    "body": [
+      "Scaffold(",
+      "  appBar: AppBar(",
+      "    title: const Text('${1:Judul}'),",
+      "  ),",
+      "  body: Center(",
+      "    child: ${2:Center(",
+      "      child: Text('Halo Dunia'),",
+      "    )},",
+      "  ),",
+      ")$0"
+    ],
+    "description": "Scaffold dengan SafeArea untuk menghindari notched area"
+  },
+  "TextButton Dasar": {
+    "scope": "dart",
+    "prefix": "/textbutton",
+    "body": [
+      "TextButton(",
+      "  onPressed: () {$1},",
+      "  child: Text('${2:Tombol}'),",
+      ")$0"
+    ],
+    "description": "TextButton dasar dengan onPressed dan child"
+  },
+  "TextButton dengan Icon": {
+    "scope": "dart",
+    "prefix": "/textbuttonicon",
+    "body": [
+      "TextButton.icon(",
+      "  onPressed: ${1:() {}},",
+      "  icon: const Icon(${2:Icons.add}),",
+      "  label: const Text('${3:Tombol}'),",
+      ")$0"
+    ],
+    "description": "TextButton dengan icon di sebelah kiri"
+  },
+  "showDialog": {
+    "scope": "dart",
+    "prefix": "/showDialog",
+    "body": [
+      "showDialog(",
+      "  context: context,",
+      "  builder: (context) {",
+      "    return $1;",
+      "  },",
+      ");",
+      "$0"
+    ],
+    "description": "showDialog"
+  },
+  "Card": {
+    "scope": "dart",
+    "prefix": "/card",
+    "body": [
+      "Card(",
+      "  child: ${1:child},",
+      ")$0"
+    ],
+    "description": "Card widget"
+  },
+  "CircleAvatar": {
+    "scope": "dart",
+    "prefix": "/circleavatar",
+    "body": [
+      "CircleAvatar(",
+      "  radius: ${1:24},",
+      "  backgroundImage: NetworkImage('${2:url}'),",
+      ")$0"
+    ],
+    "description": "Avatar berbentuk lingkaran"
+  },
+  "GridView.builder": {
+    "scope": "dart",
+    "prefix": "/gridviewbuilder",
+    "body": [
+      "GridView.builder(",
+      "  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(",
+      "    crossAxisCount: ${1:2},",
+      "    crossAxisSpacing: ${2:8},",
+      "    mainAxisSpacing: ${3:8},",
+      "  ),",
+      "  itemCount: ${4:items}.length,",
+      "  itemBuilder: (context, index) {",
+      "    final item = ${4:items}[index];",
+      "    return ${5:YourItemWidget(item)};",
+      "  },",
+      ")$0"
+    ],
+    "description": "GridView.builder dengan item variable"
+  },
+  "showModalBottomSheet": {
+    "scope": "dart",
+    "prefix": "/bottomsheet",
+    "body": [
+      "showModalBottomSheet(",
+      "  context: context,",
+      "  builder: (context) {",
+      "    return ${1:child};",
+      "  },",
+      ");$0"
+    ],
+    "description": "Menampilkan modal bottom sheet"
+  },
+  "AlertDialog": {
+    "scope": "dart",
+    "prefix": "/alertdialog",
+    "body": [
+      "AlertDialog(",
+      "  title: const Text('${1:Judul}'),",
+      "  content: const Text('${2:Pesan}'),",
+      "  actions: [",
+      "    TextButton(",
+      "      onPressed: () => Navigator.pop(context),",
+      "      child: const Text('${3:Batal}'),",
+      "    ),",
+      "    ElevatedButton(",
+      "      onPressed: () {",
+      "        ${4:}",
+      "      },",
+      "      child: const Text('${5:OK}'),",
+      "    ),",
+      "  ],",
+      ")$0"
+    ],
+    "description": "AlertDialog dengan tombol Batal dan OK"
+  },
+  "InkWell": {
+    "scope": "dart",
+    "prefix": "/inkwell",
+    "body": [
+      "InkWell(",
+      "  onTap: () {",
+      "    ${1:}",
+      "  },",
+      "  child: ${2:child},",
+      ")$0"
+    ],
+    "description": "Widget dengan efek ripple saat ditekan"
+  },
+  "GestureDetector": {
+    "scope": "dart",
+    "prefix": "/gesturedetector",
+    "body": [
+      "GestureDetector(",
+      "  onTap: () {",
+      "    ${1:}",
+      "  },",
+      "  child: ${2:child},",
+      ")$0"
+    ],
+    "description": "GestureDetector dasar"
+  },
+  "Container": {
+    "scope": "dart",
+    "prefix": "/container",
+    "body": [
+      "Container(",
+      "  padding: const EdgeInsets.all(${1:16}),",
+      "  child: ${2:child},",
+      ")$0"
+    ],
+    "description": "Container sederhana dengan padding dan child"
+  }
+}

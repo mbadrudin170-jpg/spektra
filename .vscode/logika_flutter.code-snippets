@@ -1,0 +1,90 @@
+{
+  "Try-catch dengan logging": {
+    "scope": "dart",
+    "prefix": "/trycatchlog",
+    "body": [
+      "try {",
+      "  ${1:// operasi yang berpotensi error}",
+      "} catch (e, s) {",
+      "  L.e('Gagal melakukan operasi: \\$e \\$s');",
+      "  rethrow;",
+      "}"
+    ],
+    "description": "Blok try-catch dengan L.e dan rethrow"
+  },
+  "Form Key (GlobalKey)": {
+    "scope": "dart",
+    "prefix": "/formkey",
+    "body": [
+      "final _formKey = GlobalKey<FormState>();"
+    ],
+    "description": "Deklarasi GlobalKey<FormState> untuk form"
+  },
+  "TextEditingController with FocusNode": {
+    "scope": "dart",
+    "prefix": "/TextEditingController&FocusNode",
+    "body": [
+      "final  _${1:controller}Controller = TextEditingController();",
+      "final  _${1:focusNode}FocusNode = FocusNode();"
+    ],
+    "description": "Deklarasi TextEditingController dan FocusNode"
+  },
+  "Enum basic": {
+    "scope": "dart",
+    "prefix": "/enum",
+    "body": [
+      "enum ${1:Status} {",
+      "  ${2:active},",
+      "  ${3:inactive},",
+      "  ${4:pending}",
+      "}"
+    ],
+    "description": "Deklarasi enum dasar"
+  },
+  "Enum label": {
+    "scope": "dart",
+    "prefix": "/enumlabel",
+    "body": [
+      "extension ${1:Status}Extension on ${1:Status} {",
+      "  String get label {",
+      "    switch (this) {",
+      "      case ${1:Status}.${2:active}:",
+      "        return '${2:active}';",
+      "      case ${1:Status}.${3:inactive}:",
+      "        return '${3:inactive}';",
+      "      case ${1:Status}.${4:pending}:",
+      "        return '${4:pending}';",
+      "    }",
+      "  }",
+      "}"
+    ],
+    "description": "Enum dengan label (extension untuk konversi ke String)"
+  },
+  "Enum icon": {
+    "scope": "dart",
+    "prefix": "/enumicon",
+    "body": [
+      "extension ${1:Status}Extension on ${1:Status} {",
+      "  IconData get icon {",
+      "    switch (this) {",
+      "      case ${1:Status}.${2:active}:",
+      "        return Icons.${5:check_circle};",
+      "      case ${1:Status}.${3:inactive}:",
+      "        return Icons.${6:cancel};",
+      "      case ${1:Status}.${4:pending}:",
+      "        return Icons.${7:pending};",
+      "    }",
+      "  }",
+      "}"
+    ],
+    "description": "Enum dengan IconData (extension untuk konversi ke Icon)"
+  },
+  "variable": {
+    "scope": "dart",
+    "prefix": "/variabelfinal",
+    "body": [
+      "${1:final} $2 = $3;"
+    ],
+    "description": "variabel final"
+  }
+}
