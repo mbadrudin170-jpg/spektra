@@ -58,10 +58,8 @@ Sudah dibuatkan PRD-nya: `prd/prd_info_cpu_soc_gpu.md` (dibuat 2026-11-14). Isi 
 
 ### A6. Info sistem/OS (kernel, build, patch keamanan, root check)
 
-- **Temuan:** AIDA64 (properti OS/Dalvik, deteksi root), Droid Hardware Info (kernel, governor, build), Device Info HW (build firmware lengkap, engineering menu MTK/Xiaomi), Test Your Android (root check + patch keamanan).
-- **Tujuan:** Kelengkapan profil perangkat; bagian dari identitas "Know Your Device".
-- **Referensi:** [AIDA64](https://play.google.com/store/apps/details?id=com.finalwire.aida64), [Droid Hardware Info](https://play.google.com/store/apps/details?id=com.inkwired.droidinfo), [Device Info HW](https://play.google.com/store/apps/details?id=ru.andr7e.deviceinfohw)
-- **Saran:** Halaman sistem: merek/model/board, versi Android, API level, patch keamanan, kernel, build fingerprint; root check sederhana (pola `su`/`which` atau paket `root` detection lewat plugin; tandai "indikasi", bukan verdict absolut).
+<!-- PRD: prd_info_sistem_os.md -->
+Sudah dibuatkan PRD-nya: `prd/prd_info_sistem_os.md` (dibuat 2026-11-14). Isi section ini telah dipindahkan ke PRD tersebut; bagian ini hanya penanda.
 - **Prioritas:** Sedang.
 
 ### A7. Monitoring sensor realtime (grafik)
