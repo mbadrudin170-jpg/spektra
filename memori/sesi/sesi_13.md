@@ -1,7 +1,7 @@
 # Sesi 13 — Riset aplikasi serupa Spektra lintas-store (cari_apk_kompetitor.md)
 
 ## Status
-- Status Sinkron: Belum Sinkron
+- Status Sinkron: Sudah Sinkron
 - Tanggal: Fri Nov 13 2026 19:00 WIB
 - Topik: Riset aplikasi serupa Spektra (info/diagnostik perangkat) di Google Play Store, F-Droid, GitHub, Apple App Store, Samsung Galaxy Store, Mi GetApps, Oppo App Market, dan store lainnya; hasil ditulis ke `apk_kompetitor.md`
 
@@ -12,6 +12,10 @@
 - Acuan "aplikasi serupa" = Spektra sesuai `README.md` (aplikasi Android Flutter "Know Your Device": info spesifikasi perangkat, monitoring hardware, alat diagnostik). Ringkasan singkat wajib menyebut fitur relevan Spektra (info CPU/RAM/penyimpanan/baterai/layar/OS/kernel/sensor/termal/benchmark, diagnostik layar/kamera/audio/sensor, uji jaringan, monitoring realtime, widget info perangkat).
 - Verifikasi independen wajib per skill `riset-kompetitor` (curl / iTunes lookup / webfetch); subagen boleh dipakai untuk pencarian kandidat, tetapi link hasil subagen wajib diverifikasi ulang sebelum masuk tabel.
 - Belum ada commit pada sesi ini (perubahan belum di-commit sesuai aturan sesi; commit hanya atas permintaan pengguna).
+- Apple App Store selesai (2026-11-13): 77 listing terverifikasi via iTunes lookup API (`resultCount > 0`; bulk lookup 80 id) ditambahkan ke `apk_kompetitor.md`. Dibuang karena tidak relevan/tidak jelas: `NGS Benchmark Hunter` (patokan geodesi), `Benchmark` (CRM broker), `Orbital Flight Benchmark` (globe interaktif). `sysdiagnose` (diagnostik iOS), `System Guard`, `Mobile Master-CPU Master` dikonfirmasi via deskripsi lookup; `DevCheck` versi iOS (`6819828162`) dikonfirmasi via lookup. Link memakai `trackViewUrl` tanpa `?uo=4`.
+- GitHub selesai (2026-11-13): 22 repositori APK mobile (info/diagnostik/monitor perangkat) terverifikasi (curl HTTP 200 pada halaman repositori; `VD171/VD-Infos` & `Pensum` dikonfirmasi via webfetch bahwa rilis APK tersedia) ditambahkan ke `apk_kompetitor.md`. `appzy/DeviceInfo` (library kolektor, bukan aplikasi end-user) dan `thuxnder/androiddevice.info` (archived, mengirim data ke situs pihak ketiga) tidak disertakan. API rate limit `api.github.com` habis (403, IP bersama) — verifikasi halaman repositori memakai curl HTML.
+- F-Droid selesai (2026-11-13): 16 listing terverifikasi HTTP 200 (curl) ditambahkan ke `apk_kompetitor.md`. Voodoo Screen Test Patterns (`org.projectvoodoo.screentestpatterns`) tidak disertakan — F-Droid merespon 404 (halaman sudah tidak tersedia; hasil pencarian engine usang). `cpuinfo` tercatat di dua store (Play Store & F-Droid) — duplikasi lintas store diperbolehkan aturan skill.
+- Google Play Store selesai (2026-11-13): 56 listing terverifikasi HTTP 200 (curl dengan UA Chrome) ditulis ke `apk_kompetitor.md` (file baru). Kandidat 404 dibuang: `com.flar2.devcheck` (ID valid justru tanpa `com.`: `flar2.devcheck`), `com.primatelabs.geekbench6` (digantikan Geekbench 7 `com.primatelabs.parkdale`), `com.glbenchmark.glbenchmark27` (GFXBench sudah tidak ada di Play Store), `com.waterdaaan.cpufloat`, seluruh varian GFXBench/Geekbench 5 yang dites. AnTuTu Benchmark dihapus dari Play Store sejak 2020 (dipertimbangkan lewat store lainnya); CPU Throttling Test (`com.nearlynobody.pufer`) tidak dapat diverifikasi — tidak disertakan. DevCheck dikonfirmasi via webfetch (`flar2.devcheck` valid, bukan paket palsu). Semua listing baru: `Status Analisa = Belum Dianalisa`.
 
 ## Berkas Terdampak
 | Lokasi File | Status Perubahan | Deskripsi |
@@ -19,4 +23,4 @@
 | `memori/sesi/sesi_13.md` | Dibuat | Berkas sesi ini |
 
 ## Sinkronisasi ke MEMORI.md
-Belum disinkronkan
+Disinkronkan pada 2026-11-14 (catch-up, sesi_15, atas arahan pengguna): `MEMORI.md` — `Riwayat Diskusi` (entri `diskusi_3.md`: Play Store & F-Droid selesai, 56 + 16 listing `Belum Dianalisa`), `Lokasi Berkas Sesi` (nomor tertinggi 15; `sesi_13.md` ditandai `Sudah Sinkron`), `Catatan untuk Model Selanjutnya`, `Catatan Teknis`, dan `Lokasi Hasil Diskusi` (penghapusan `diskusi_1.md` dicatat) diperbarui; `memori/riwayat_perubahan.md` — entri sinkronisasi sesi_13 ditambahkan. Perubahan nyata sesi_13: berkas `apk_kompetitor.md` dibuat dan diperbarui (Google Play Store 56 listing, F-Droid 16 listing; seluruh listing baru `Status Analisa = Belum Dianalisa`; link diverifikasi HTTP 200 via curl). `## Berkas Terdampak` sesi_13 hanya mencatat sesi_13.md, padahal `apk_kompetitor.md` ikut berubah — dicatat di sini sebagai koreksi jejak. Store berikutnya (GitHub s.d. store lainnya) belum dikerjakan; commit belum ada (aturan sesi: commit hanya atas permintaan pengguna).
