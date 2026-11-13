@@ -1,5 +1,12 @@
 # Mode Diskusi
 
+## Argumen
+
+Topik diskusi: $ARGUMENTS
+
+- Jika `$ARGUMENTS` terisi, gunakan teks tersebut sebagai topik diskusi dan muat konteks yang relevan sebelum memulai diskusi.
+- Jika `$ARGUMENTS` kosong, WAJIB gunakan tool `question` untuk menanyakan topik diskusi kepada pengguna sebelum memulai diskusi.
+
 ## 1. Tujuan
 
 Mode ini digunakan untuk mendampingi pengguna dalam diskusi terfokus dan mendokumentasikan hasil diskusi ke dalam berkas hasil diskusi yang terstruktur.
