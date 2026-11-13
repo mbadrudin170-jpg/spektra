@@ -11,16 +11,18 @@
 - Versi: `1.0.0+1`
 - SDK Dart: `^3.13.7`
 - Branch git aktif: `main`
-- Status pengembangan: awal (belum ada fitur `lib/fitur/...`; hanya `lib/main.dart`, `lib/app.dart`, `lib/home.dart`, dan `test/widget_test.dart`)
+- Status pengembangan: awal (fitur pertama `lib/fitur/pengaturan/` — layar pengaturan mode tema; sebelumnya hanya `lib/main.dart`, `lib/app.dart`, `lib/home.dart`, dan `test/widget_test.dart`)
 
 ## Tujuan Proyek
 Belum diketahui. Dokumen `docs/struktur_proyek.md` dan `docs/rencana_integrasi_profile.md` mengindikasikan adanya spesifikasi fitur yang cukup lengkap (dashboard, biodata, impian, diary craving, dll.), tetapi dokumen tersebut belum diverifikasi terhadap kode sumber. Jangan menganggap `docs/struktur_proyek.md` sebagai kondisi aktual `lib/`.
 
 ## Struktur Penting
 - `lib/main.dart` — entry point aplikasi (hanya berisi `main()`)
-- `lib/app.dart` — root widget (`MyApp`)
-- `lib/home.dart` — halaman utama (`MyHomePage` dan `_MyHomePageState`); memuat `NavigationBar` 4 tab (Dashboard, Biodata, Impian, Lainnya) mengikuti pola `docs/lib.md`; tab selain Dashboard masih placeholder
-- `test/widget_test.dart` — satu widget test bawaan
+- `lib/app.dart` — root widget (`MyApp`, kini `StatefulWidget`); membuat `TemaController`, menyediakan `theme`/`darkTheme`/`themeMode` reaktif ke `MaterialApp`
+- `lib/home.dart` — halaman utama (`MyHomePage` dan `_MyHomePageState`); memuat `NavigationBar` 4 tab (Dashboard, Biodata, Impian, Lainnya) mengikuti pola `docs/lib.md`; tab selain Dashboard placeholder, tab "Lainnya" kini menampilkan `PengaturanScreen`
+- `lib/fitur/pengaturan/tema/tema_controller.dart` — `TemaController` (`ChangeNotifier`); memuat/mengubah mode tema (Terang/Gelap/Ikuti sistem) dan mempersistenkannya via `shared_preferences` (kunci `kunci_mode_tema`)
+- `lib/fitur/pengaturan/screens/pengaturan_screen.dart` — layar `PengaturanScreen` (pilihan mode tema; disematkan sebagai konten tab, tanpa `Scaffold`/`AppBar` sendiri)
+- `test/widget_test.dart` — satu widget test bawaan (mock `SharedPreferences`)
 - `docs/` — dokumen spesifikasi/referensi (belum terverifikasi sinkron dengan kode)
 - `script/` — kumpulan skrip bash pengembangan (antara lain `build_core_shared.sh`, `build_lib_docs.sh`, `build_structure.sh`, `script_tes.sh`)
 - `.agents/rules/`, `.agents/skills/`, `SKILLS_INDEX.md` — aturan dan skill proyek
@@ -40,6 +42,9 @@ Belum diketahui. Dokumen `docs/struktur_proyek.md` dan `docs/rencana_integrasi_p
 - Detail konvensi lain merujuk `.agents/skills/custom/*`, bukan disalin ke berkas ini.
 
 ## Catatan Teknis
+- Dependency baru: `shared_preferences` (persistensi pengaturan lokal; belum ada Riverpod/state management lain di proyek).
+- Logger proyek (`L.*`) belum ada di spektra; error non-fatal dicatat dengan `debugPrint` sementara.
+- Tema aplikasi memakai `ColorScheme.fromSeed(seedColor: Colors.deepPurple)` dengan `useMaterial3: true`, varian terang dan gelap.
 - `docs/struktur_proyek.md` memuat daftar file `lib/fitur/...` yang belum ada di `lib/`; kemungkinan dokumen port/referensi dari proyek lain. Belum diketahui apakah spektra adalah lanjutan, port, atau proyek baru terpisah.
 - Working tree tidak bersih per 2026-11-14 WIB (perubahan belum di-commit: `.kilo/commands/mode/mode_diskusi.md`, `hasil_diskusi/diskusi_1.md`, `MEMORI.md`, `memori/riwayat_perubahan.md`, `memori/sesi/sesi_3.md`); 3 commit: `1fb6840` (Initial commit), `4078d78` (konfigurasi linting kustom), `90f66d8` (as).
 
@@ -54,7 +59,7 @@ Folder `hasil_diskusi/` di root proyek. Berkas: `diskusi_1.md`, `diskusi_2.md` (
 Lihat `memori/riwayat_perubahan.md`.
 
 ## Lokasi Berkas Sesi
-`memori/sesi/sesi_N.md` (diarsipkan permanen). Nomor tertinggi saat ini: 7 (`sesi_7.md`). Catatan: `sesi_2.md` masih ber-status `Belum Sinkron` (mengklaim `apk_kompetitor.md` dibuat, tetapi berkas tidak ada dan `git status` bersih; tidak dapat diverifikasi — menunggu keputusan pengguna).
+`memori/sesi/sesi_N.md` (diarsipkan permanen). Nomor tertinggi saat ini: 8 (`sesi_8.md`). Catatan: `sesi_2.md` masih ber-status `Belum Sinkron` (mengklaim `apk_kompetitor.md` dibuat, tetapi berkas tidak ada dan `git status` bersih; tidak dapat diverifikasi — menunggu keputusan pengguna).
 
 ## Catatan untuk Model Selanjutnya
 - Jangan mengarang status pengembangan atau tujuan produk; bagian yang belum diverifikasi wajib ditandai "Belum diketahui".
