@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
+import 'package:spektra/fitur/statistik/widgets/memori_penyimpanan_section.dart';
 import 'package:spektra/fitur/statistik/widgets/spesifikasi_baterai_section.dart';
 
 // Layar statistik (minimal) — wadah section statistik perangkat; saat ini
-// memuat section "Spesifikasi Baterai" (Android).
+// memuat section "Spesifikasi Baterai" dan "Memori & Penyimpanan" (Android).
 // Disematkan sebagai konten tab (bukan layar yang di-push), sehingga tidak
 // membawa `Scaffold`/`AppBar` sendiri — kerangka layar disediakan pemanggil.
 class StatistikScreen extends StatelessWidget {
@@ -27,6 +28,10 @@ class StatistikScreen extends StatelessWidget {
         const Padding(
           padding: EdgeInsets.symmetric(horizontal: 16),
           child: SpesifikasiBateraiSection(),
+        ),
+        const Padding(
+          padding: EdgeInsets.fromLTRB(16, 12, 16, 0),
+          child: MemoriPenyimpananSection(),
         ),
         Padding(
           padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),

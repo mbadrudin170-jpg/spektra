@@ -12,7 +12,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:spektra/app.dart';
 import 'package:spektra/fitur/statistik/model/baterai_info.dart';
+import 'package:spektra/fitur/statistik/model/memori_info.dart';
 import 'package:spektra/fitur/statistik/notifier/baterai_notifier.dart';
+import 'package:spektra/fitur/statistik/notifier/memori_notifier.dart';
 
 // Notifier baterai palsu untuk lingkungan test (plugin tidak tersedia).
 class _BateraiNotifierPalsu extends BateraiNotifier {
@@ -31,6 +33,22 @@ class _BateraiNotifierPalsu extends BateraiNotifier {
   }
 }
 
+// Notifier memori palsu untuk lingkungan test (plugin tidak tersedia).
+class _MemoriNotifierPalsu extends MemoriNotifier {
+  @override
+  Future<MemoriInfo?> build() async {
+    return const MemoriInfo(
+      ramTotalMb: 6144,
+      ramTersediaMb: 2048,
+      ramTerpakaiMb: 4096,
+      perangkatRamRendah: false,
+      penyimpananTotalByte: 128000000000,
+      penyimpananBebasByte: 64000000000,
+      penyimpananTerpakaiByte: 64000000000,
+    );
+  }
+}
+
 void main() {
   setUp(() {
     SharedPreferences.setMockInitialValues({});
@@ -38,11 +56,15 @@ void main() {
 
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    // Plugin baterai tidak tersedia pada VM test; gunakan notifier palsu agar
-    // section statistik tidak menggantung pada panggilan platform channel.
+    // Plugin baterai dan device_info_plus tidak tersedia pada VM test;
+    // gunakan notifier palsu agar section statistik tidak menggantung pada
+    // panggilan platform channel.
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [bateraiProvider.overrideWith(_BateraiNotifierPalsu.new)],
+        overrides: [
+          bateraiProvider.overrideWith(_BateraiNotifierPalsu.new),
+          memoriProvider.overrideWith(_MemoriNotifierPalsu.new),
+        ],
         child: const MyApp(),
       ),
     );

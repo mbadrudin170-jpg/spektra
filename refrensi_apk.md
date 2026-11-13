@@ -64,12 +64,6 @@
 Sudah dibuatkan PRD-nya: `prd/prd_tes_diagnostik.md` (dibuat 2026-11-14). Isi section ini telah dipindahkan ke PRD tersebut; bagian ini hanya penanda.
 - **Prioritas:** Tinggi.
 
-### A5. Info memori & penyimpanan
-
-<!-- PRD: prd_info_memori_penyimpanan.md -->
-Sudah dibuatkan PRD-nya: `prd/prd_info_memori_penyimpanan.md` (dibuat 2026-11-14). Isi section ini telah dipindahkan ke PRD tersebut; bagian ini hanya penanda.
-- **Prioritas:** Tinggi.
-
 ### A6. Info sistem/OS (kernel, build, patch keamanan, root check)
 
 - **Temuan:** AIDA64 (properti OS/Dalvik, deteksi root), Droid Hardware Info (kernel, governor, build), Device Info HW (build firmware lengkap, engineering menu MTK/Xiaomi), Test Your Android (root check + patch keamanan).
