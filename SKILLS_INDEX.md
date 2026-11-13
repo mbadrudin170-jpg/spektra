@@ -130,99 +130,103 @@
 - Trigger : saat mencari teks, pemanggilan fungsi, atau pola di dalam file sumber
 - Status : diperbarui : Fri Nov 13 2026 05:33:40 WIB
 
-33. .agents/skills/custom/penggunaan-tool-question/SKILL.md
+33. .agents/skills/custom/pengurutan-paket-pubspec/SKILL.md
+- Trigger : saat menambah atau mengurutkan dependensi pubspec.yaml
+- Status : diperbarui : Sat Nov 14 2026 02:59:52 WIB
+
+34. .agents/skills/custom/penggunaan-tool-question/SKILL.md
 - Trigger : saat menyusun pertanyaan ke pengguna
 - Status : diperbarui : Fri Nov 13 2026 05:33:40 WIB
 
-34. .agents/skills/custom/penjadwalan-frame-dan-pemantauan-performa-flutter/SKILL.md
+35. .agents/skills/custom/penjadwalan-frame-dan-pemantauan-performa-flutter/SKILL.md
 - Trigger : saat mengatur siklus frame dan pemantauan performa
 - Status : diperbarui : Fri Nov 13 2026 05:33:40 WIB
 
-35. .agents/skills/custom/performa-aplikasi/SKILL.md
+36. .agents/skills/custom/performa-aplikasi/SKILL.md
 - Trigger : saat mengoptimasi performa aplikasi
 - Status : diperbarui : Fri Nov 13 2026 05:33:40 WIB
 
-36. .agents/skills/custom/platform-dispatcher-locale/SKILL.md
+37. .agents/skills/custom/platform-dispatcher-locale/SKILL.md
 - Trigger : saat membaca pengaturan sistem dari engine
 - Status : diperbarui : Fri Nov 13 2026 05:33:40 WIB
 
-37. .agents/skills/custom/pola-testing/SKILL.md
+38. .agents/skills/custom/pola-testing/SKILL.md
 - Trigger : saat menulis test
 - Status : diperbarui : Fri Nov 13 2026 05:33:40 WIB
 
-38. .agents/skills/custom/pola-ui/SKILL.md
+39. .agents/skills/custom/pola-ui/SKILL.md
 - Trigger : saat menerapkan pola UI Flutter
 - Status : diperbarui : Fri Nov 13 2026 05:33:40 WIB
 
-39. .agents/skills/custom/pola-ux/SKILL.md
+40. .agents/skills/custom/pola-ux/SKILL.md
 - Trigger : saat menerapkan pola UX Flutter
 - Status : diperbarui : Fri Nov 13 2026 05:33:40 WIB
 
-40. .agents/skills/custom/riset-kompetitor/SKILL.md
+41. .agents/skills/custom/riset-kompetitor/SKILL.md
 - Trigger : saat menambah atau memperbarui apk_kompetitor.md atau mencari aplikasi kompetitor untuk Spektra
 - Status : diperbarui : Sat Nov 14 2026 01:35:34 WIB
 
-41. .agents/skills/custom/riverpod-pola/SKILL.md
+42. .agents/skills/custom/riverpod-pola/SKILL.md
 - Trigger : saat memakai Riverpod
 - Status : diperbarui : Fri Nov 13 2026 05:33:40 WIB
 
-42. .agents/skills/custom/scaffold-struktur-layar/SKILL.md
+43. .agents/skills/custom/scaffold-struktur-layar/SKILL.md
 - Trigger : saat menyusun struktur layar
 - Status : diperbarui : Fri Nov 13 2026 05:33:40 WIB
 
-43. .agents/skills/custom/spacing/SKILL.md
+44. .agents/skills/custom/spacing/SKILL.md
 - Trigger : saat mengatur jarak antar elemen UI
 - Status : diperbarui : Fri Nov 13 2026 05:33:40 WIB
 
-44. .agents/skills/custom/struktur-folder-lib/SKILL.md
+45. .agents/skills/custom/struktur-folder-lib/SKILL.md
 - Trigger : saat menata atau membuat struktur folder lib/ Flutter
 - Status : diperbarui : Sat Nov 14 2026 02:05:25 WIB
 
-45. .agents/skills/custom/text-form-field-validasi/SKILL.md
+46. .agents/skills/custom/text-form-field-validasi/SKILL.md
 - Trigger : saat membuat input teks dengan validasi
 - Status : diperbarui : Fri Nov 13 2026 05:33:40 WIB
 
-46. .agents/skills/custom/theme-data-color-schema/SKILL.md
+47. .agents/skills/custom/theme-data-color-schema/SKILL.md
 - Trigger : saat mengonfigurasi tema aplikasi
 - Status : diperbarui : Fri Nov 13 2026 05:33:40 WIB
 
-47. .agents/skills/custom/tipografi/SKILL.md
+48. .agents/skills/custom/tipografi/SKILL.md
 - Trigger : saat mengatur tipografi
 - Status : diperbarui : Fri Nov 13 2026 05:33:40 WIB
 
-48. .agents/skills/custom/type-promotion-null-safety/SKILL.md
+49. .agents/skills/custom/type-promotion-null-safety/SKILL.md
 - Trigger : saat mengakses field nullable objek model
 - Status : diperbarui : Fri Nov 13 2026 05:33:40 WIB
 
-49. .agents/skills/custom/validasi-form-sebelum-penyimpanan/SKILL.md
+50. .agents/skills/custom/validasi-form-sebelum-penyimpanan/SKILL.md
 - Trigger : saat memvalidasi form sebelum simpan
 - Status : diperbarui : Fri Nov 13 2026 05:33:40 WIB
 
-50. .agents/skills/custom/validasi-platform-izin/SKILL.md
+51. .agents/skills/custom/validasi-platform-izin/SKILL.md
 - Trigger : saat fitur memerlukan platform atau izin
 - Status : diperbarui : Fri Nov 13 2026 05:33:40 WIB
 
-51. .agents/skills/custom/validasi-tapering/SKILL.md
+52. .agents/skills/custom/validasi-tapering/SKILL.md
 - Trigger : saat memvalidasi mode berhenti bertahap (tapering)
 - Status : diperbarui : Fri Nov 13 2026 05:33:40 WIB
 
-52. .agents/skills/custom/visualisasi-progres-impian/SKILL.md
+53. .agents/skills/custom/visualisasi-progres-impian/SKILL.md
 - Trigger : saat memvisualisasikan progres impian atau perayaan
 - Status : diperbarui : Fri Nov 13 2026 05:33:40 WIB
 
-53. .agents/skills/custom/widget-custom/SKILL.md
+54. .agents/skills/custom/widget-custom/SKILL.md
 - Trigger : saat membuat widget custom reusable
 - Status : diperbarui : Fri Nov 13 2026 05:33:40 WIB
 
-54. .agents/skills/custom/widget-lifecycle-state/SKILL.md
+55. .agents/skills/custom/widget-lifecycle-state/SKILL.md
 - Trigger : saat mengelola lifecycle widget
 - Status : diperbarui : Fri Nov 13 2026 05:33:40 WIB
 
-55. .agents/skills/custom/withvalues-opacity-warna/SKILL.md
+56. .agents/skills/custom/withvalues-opacity-warna/SKILL.md
 - Trigger : saat mengatur opacity warna
 - Status : diperbarui : Fri Nov 13 2026 05:33:40 WIB
 
-56. .agents/skills/custom/zona-waktu-perangkat-pengingat/SKILL.md
+57. .agents/skills/custom/zona-waktu-perangkat-pengingat/SKILL.md
 - Trigger : saat menjadwalkan pengingat berbasis zona waktu
 - Status : diperbarui : Fri Nov 13 2026 05:33:40 WIB
 

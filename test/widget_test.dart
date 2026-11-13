@@ -14,7 +14,7 @@ import 'package:spektra/app.dart';
 import 'package:spektra/fitur/statistik/model/baterai_info.dart';
 import 'package:spektra/fitur/statistik/notifier/baterai_notifier.dart';
 
-// Notification baterai palsu untuk lingkungan test (plugin tidak tersedia).
+// Notifier baterai palsu untuk lingkungan test (plugin tidak tersedia).
 class _BateraiNotifierPalsu extends BateraiNotifier {
   @override
   Future<BateraiInfo?> build() async {
